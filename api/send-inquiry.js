@@ -127,10 +127,16 @@ export default async function handler(req, res) {
 
     if (!response.ok) {
       // Log the provider's reason server-side; never reflect it to the client.
+      // Resend's message can quote the account owner's personal address, which
+      // must not appear on a public endpoint — only the numeric status goes back,
+      // which is enough to tell a bad key (401) from the shared-sender recipient
+      // restriction (403) without disclosing anything.
       console.error('Resend rejected the message', response.status, await response.text());
-      return res
-        .status(502)
-        .json({ ok: false, error: 'We could not send that just now. Please email us directly.' });
+      return res.status(502).json({
+        ok: false,
+        error: 'We could not send that just now. Please email us directly.',
+        providerStatus: response.status,
+      });
     }
   } catch (err) {
     console.error('Failed to reach the email provider', err);
