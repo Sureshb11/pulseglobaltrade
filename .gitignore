@@ -1,0 +1,6 @@
+node_modules
+dist
+.DS_Store
+
+# Source design export — the extracted folder is tracked instead
+stitch_pulseglobal_export_hub.zip

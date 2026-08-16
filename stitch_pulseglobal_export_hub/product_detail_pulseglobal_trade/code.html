@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Detail - PulseGlobal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#76849f",
+                        "tertiary-fixed-dim": "#7bd8b1",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#004f4f",
+                        "on-tertiary-fixed": "#002115",
+                        "surface-container-high": "#e6e8ea",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#d8dadc",
+                        "tertiary": "#000000",
+                        "secondary": "#006a6a",
+                        "inverse-primary": "#b9c7e4",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "primary-fixed": "#d6e3ff",
+                        "background": "#f7f9fb",
+                        "on-tertiary-container": "#339471",
+                        "primary-container": "#0d1c32",
+                        "on-primary-fixed": "#0d1c32",
+                        "surface-bright": "#f7f9fb",
+                        "on-surface-variant": "#44474d",
+                        "outline-variant": "#c5c6cd",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#97f5cc",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f2f4f6",
+                        "primary": "#000000",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#76d6d5",
+                        "tertiary-container": "#002115",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary-fixed-variant": "#00513a",
+                        "on-background": "#191c1e",
+                        "on-primary-fixed-variant": "#39475f",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "on-secondary-container": "#006e6e",
+                        "surface-tint": "#515f78",
+                        "outline": "#75777e",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container": "#eceef0",
+                        "inverse-on-surface": "#eff1f3",
+                        "inverse-surface": "#2d3133",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#93f2f2",
+                        "on-surface": "#191c1e",
+                        "secondary-container": "#90efef",
+                        "on-secondary-fixed": "#002020"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "stack-md": "12px",
+                        "margin-desktop": "64px",
+                        "stack-lg": "24px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "stack-sm": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "display-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "headline-md": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.surface'); color: theme('colors.on-surface'); }
+    </style>
+</head>
+<body class="antialiased">
+<!-- TopNavBar -->
+<nav class="bg-surface-container-lowest fixed top-0 w-full z-50 border-b border-outline-variant shadow-sm flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="text-headline-sm font-headline-sm font-bold text-primary">
+            PulseGlobal
+        </div>
+<div class="hidden md:flex gap-gutter">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer active:opacity-80" href="#">About</a>
+<a class="font-label-md text-label-md text-secondary border-b-2 border-secondary pb-1 hover:text-secondary transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Products</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Export Process</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Global Reach</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Quality</a>
+</div>
+<button class="bg-primary-container text-on-primary font-label-md text-label-md px-4 py-2 rounded hover:bg-[#008080] transition-colors duration-200">
+            Request a Quote
+        </button>
+</nav>
+<main class="pt-28 pb-16 px-margin-desktop max-w-container-max mx-auto">
+<!-- Breadcrumbs -->
+<div class="mb-stack-lg flex items-center gap-2">
+<a class="font-label-sm text-label-sm text-on-surface-variant uppercase" href="#">Products</a>
+<span class="material-symbols-outlined text-outline-variant text-[16px]">chevron_right</span>
+<span class="font-label-sm text-label-sm text-[#C5A059] uppercase">Premium Grade Spices</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-stack-lg">
+<!-- Left Gallery -->
+<div class="lg:col-span-7">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden mb-stack-md shadow-[0_4px_12px_rgba(10,25,47,0.04)] aspect-[4/3] relative group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-quality macro photograph of premium grade spices piled neatly in wooden bowls. The lighting is bright and clean, emphasizing the rich textures and vibrant colors of the spices. The background is a clean, off-white surface, fitting perfectly within a modern, minimalist B2B e-commerce platform. The overall aesthetic is professional, crisp, and high-end." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi97qRvvTJ_P9JulBq02I9ILNs7p3qa08a6sL226hIGZFySQzI-eEDesYMtu2CUS4Evu44mnkeTmLK-gUzJ6MVZZbj8NNIP1fkAMLVbRaiC9wnqRBt0uQuuOWlE1vSqTP41zLC5BNkbXuTZw5cvO1u3KYcKq0-pK5Kfm0g3TFgt_nn3YT50u4cMa6i-PBwMwnXdZgpS_e-dWKlxZ7zGG0qa_hl4JuftnXbJiIrOBy_Hyd5G7BxZCAoEg"/>
+</div>
+<div class="grid grid-cols-3 gap-base">
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden shadow-[0_4px_12px_rgba(10,25,47,0.04)] aspect-square cursor-pointer border-2 border-transparent hover:border-secondary transition-colors">
+<img class="w-full h-full object-cover" data-alt="A detailed close-up shot of raw cardamom pods. The image is brightly lit, showcasing the fresh green color and texture. Set against a clean, minimal white background to align with a premium corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiJkwEdP93TGIIC9ocaB_KZ0SIHVHvt7aj-553OkaCYLSOsuRh-_YHdLMFxBrv1hf4DnzMNuyCGy7smUR8wuoaf8If-yfQpYq39F2MZpNEuAlps9-5z8gBOmnM82ZJT_6WZ1ZOp8yrkfyFcEtE4H_rxJG-dIFDINnPIk3SgpmhWHR0gYG1lCAHaxU3COzeLZQXfFPhKX1qDmZDowMWQEaSL1LKJji7sngXT5aNp52GWCWE4PtRFwqOeA"/>
+</div>
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden shadow-[0_4px_12px_rgba(10,25,47,0.04)] aspect-square cursor-pointer border-2 border-transparent hover:border-secondary transition-colors">
+<img class="w-full h-full object-cover" data-alt="A macro photography shot of finely ground turmeric powder. The vibrant yellow-orange color pops against a subtle, cool-toned off-white background. The lighting is soft and even, highlighting the fine texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf2X1zSGiE8hO8pNRnATorGOJkIRN3ekTxxAc-dXsS35Du1eMdiEnWHuc3FnhDjy4YRg3e7ZzuYXZKNQg-wNZuaBq2YHhUJ_wm5POwOiaLl5-0UTSyJg12TdfQLVrza1yanHi-Gfojp7F8xZITLmLuBbRYehqmfPT02Sgg-atqLDMa96o2cc3zE2XfVLUKyMRphCr6pFDG3TrD0vVfBrtj3Zgw2BT8cv1PDWmVlLMXHulwdrX9Sp9CQg"/>
+</div>
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden shadow-[0_4px_12px_rgba(10,25,47,0.04)] aspect-square cursor-pointer border-2 border-transparent hover:border-secondary transition-colors">
+<img class="w-full h-full object-cover" data-alt="A beautifully arranged composition of star anise and cinnamon sticks. The lighting is precise, casting soft shadows that give depth. The setting is a minimalist studio environment, perfectly suited for high-end international trade catalogs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqSGYkiAOO-esHUkVIZJWRlpCRTxEOBE9zY_860KfhGGmbj8I_uHk1lF-_dMjmf6VCZZ6ayC_tUlpHmpckTBWtosKFxP80rtB9shxiVAhwq5VfJpOiqkwWBTEWtMs6ub8KcMj1rWmETQOlZaBiwE0iqMXCPoLuVOLTPVRbsxbnMYuiKfS5bdv2tFEKxNlmuoJUjKRZWvg6m8So_-9eMXTHTaYHbqPKq3z7lYqZ5sWTUaAUAuAh_82UDg"/>
+</div>
+</div>
+</div>
+<!-- Right Product Info -->
+<div class="lg:col-span-5 flex flex-col">
+<div class="bg-surface-container-lowest rounded-xl p-stack-lg shadow-[0_4px_12px_rgba(10,25,47,0.04)] h-full flex flex-col">
+<div class="flex justify-between items-start mb-stack-md">
+<div>
+<span class="inline-block px-3 py-1 rounded-full bg-[#C5A059]/10 text-[#C5A059] font-label-sm text-label-sm mb-2">Premium Shipment</span>
+<h1 class="font-headline-md text-headline-md text-primary">Premium Grade Spices Collection</h1>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">
+                        Sourced directly from the finest estates in India, our premium grade spice collection meets the highest international quality standards. Ideal for bulk processing and private label retail.
+                    </p>
+<div class="grid grid-cols-2 gap-stack-md mb-stack-lg">
+<div class="border border-outline-variant/30 rounded p-stack-md bg-surface">
+<span class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Origin</span>
+<span class="font-body-md text-body-md text-primary font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">location_on</span> India
+                            </span>
+</div>
+<div class="border border-outline-variant/30 rounded p-stack-md bg-surface">
+<span class="font-label-sm text-label-sm text-on-surface-variant block mb-1">MOQ</span>
+<span class="font-body-md text-body-md text-primary font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">scale</span> 500 KG
+                            </span>
+</div>
+<div class="border border-outline-variant/30 rounded p-stack-md bg-surface">
+<span class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Packaging</span>
+<span class="font-body-md text-body-md text-primary font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span> Bulk Sacks / Custom
+                            </span>
+</div>
+<div class="border border-outline-variant/30 rounded p-stack-md bg-surface">
+<span class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Private Label</span>
+<span class="font-body-md text-body-md text-primary font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-[#339471]">check_circle</span> Available
+                            </span>
+</div>
+</div>
+<div class="mt-auto flex flex-col gap-3">
+<button class="w-full bg-primary-container text-on-primary font-label-md text-label-md py-4 rounded hover:bg-[#008080] transition-colors duration-200 flex justify-center items-center gap-2">
+                            Request a Quote <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="w-full bg-transparent text-primary-container font-label-md text-label-md py-4 rounded border border-outline-variant hover:bg-surface-container transition-colors duration-200 flex justify-center items-center gap-2">
+                            Download Specification <span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Details Sections -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-stack-lg">
+<div class="bg-surface-container-lowest rounded-xl p-stack-lg shadow-[0_4px_12px_rgba(10,25,47,0.04)]">
+<div class="flex items-center gap-2 mb-stack-md">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<h3 class="font-title-lg text-title-lg text-primary">Quality Standards</h3>
+</div>
+<ul class="space-y-2">
+<li class="flex items-start gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-outline mt-1">check</span> ISO 9001:2015 Certified Processing
+                    </li>
+<li class="flex items-start gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-outline mt-1">check</span> Strict Aflatoxin &amp; Pesticide Monitoring
+                    </li>
+<li class="flex items-start gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-outline mt-1">check</span> Complete Traceability from Source
+                    </li>
+</ul>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-stack-lg shadow-[0_4px_12px_rgba(10,25,47,0.04)]">
+<div class="flex items-center gap-2 mb-stack-md">
+<span class="material-symbols-outlined text-secondary">flight_takeoff</span>
+<h3 class="font-title-lg text-title-lg text-primary">Export Availability</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                    Ready for immediate dispatch from major Indian ports. We handle all complex export documentation.
+                </p>
+<div class="flex gap-2 flex-wrap">
+<span class="px-3 py-1 bg-surface rounded-full text-label-sm font-label-sm text-on-surface-variant border border-outline-variant/30">FOB</span>
+<span class="px-3 py-1 bg-surface rounded-full text-label-sm font-label-sm text-on-surface-variant border border-outline-variant/30">CIF</span>
+<span class="px-3 py-1 bg-surface rounded-full text-label-sm font-label-sm text-on-surface-variant border border-outline-variant/30">Air Freight</span>
+<span class="px-3 py-1 bg-surface rounded-full text-label-sm font-label-sm text-on-surface-variant border border-outline-variant/30">Sea Freight</span>
+</div>
+</div>
+<div class="bg-primary-container rounded-xl p-stack-lg text-on-primary-container flex flex-col justify-center items-start">
+<h3 class="font-title-lg text-title-lg text-surface-container-lowest mb-2">Need Custom Requirements?</h3>
+<p class="font-body-md text-body-md mb-stack-md opacity-80">Speak with our trade specialists about specific grading or bespoke packaging solutions.</p>
+<button class="text-[#C5A059] font-label-md text-label-md flex items-center gap-2 hover:opacity-80 transition-opacity">
+                    Consult Expert <span class="material-symbols-outlined text-[18px]">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container w-full py-16 grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-sm text-headline-sm text-surface-container-lowest">
+            PulseGlobal
+        </div>
+<div class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Company</a>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Products</a>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Export</a>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Contact</a>
+</div>
+<div class="md:col-span-2 flex justify-end items-start">
+<span class="font-body-md text-body-md text-on-primary-container opacity-80">© 2024 PulseGlobal Trade. All rights reserved.</span>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,109 @@
+<header
+  id="site-header"
+  class="fixed top-0 inset-x-0 z-50 h-20 bg-surface-container-lowest border-b border-outline-variant shadow-sm transition-shadow duration-300"
+>
+  <div class="container-page h-full flex items-center justify-between gap-4">
+    <!-- Brand -->
+    <a
+      href="/index.html"
+      class="flex items-center gap-2 min-h-[44px] font-headline-sm text-headline-sm font-bold text-primary shrink-0"
+    >
+      <span class="material-symbols-outlined fill text-secondary" aria-hidden="true">language</span>
+      <span>PulseGlobal</span>
+    </a>
+
+    <!-- Desktop navigation -->
+    <nav class="hidden lg:flex items-center gap-7" aria-label="Main">
+      <a class="nav-link" href="/index.html" {{active:home}}>Home</a>
+      <a class="nav-link" href="/about.html" {{active:about}}>About</a>
+      <a class="nav-link" href="/products.html" {{active:products}}>Products</a>
+      <a class="nav-link" href="/export-process.html" {{active:export-process}}>Export Process</a>
+      <a class="nav-link" href="/global-reach.html" {{active:global-reach}}>Global Reach</a>
+      <a class="nav-link" href="/quality.html" {{active:quality}}>Quality</a>
+      <a class="nav-link" href="/contact.html" {{active:contact}}>Contact</a>
+    </nav>
+
+    <!-- Desktop actions -->
+    <div class="hidden lg:flex items-center gap-3 shrink-0">
+      <a class="btn-primary px-5" href="/quote.html">Request a Quote</a>
+    </div>
+
+    <!-- Mobile / tablet menu trigger -->
+    <button
+      type="button"
+      id="menu-toggle"
+      class="lg:hidden inline-flex items-center justify-center w-11 h-11 -mr-2 rounded text-primary hover:bg-surface-container-low transition-colors"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile drawer -->
+<div
+  id="menu-overlay"
+  class="lg:hidden fixed inset-0 z-40 bg-primary-container/50 opacity-0 pointer-events-none transition-opacity duration-300"
+  hidden
+></div>
+
+<aside
+  id="mobile-menu"
+  class="lg:hidden fixed top-0 right-0 z-50 h-[100dvh] w-[86%] max-w-sm
+         bg-surface-container-lowest shadow-ambient-2 flex flex-col
+         translate-x-full transition-transform duration-300 ease-out"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Site menu"
+  hidden
+>
+  <div class="flex items-center justify-between h-20 px-margin-mobile border-b border-outline-variant shrink-0">
+    <span class="font-headline-sm text-headline-sm font-bold text-primary">Menu</span>
+    <button
+      type="button"
+      id="menu-close"
+      class="inline-flex items-center justify-center w-11 h-11 -mr-2 rounded text-primary hover:bg-surface-container-low transition-colors"
+      aria-label="Close menu"
+    >
+      <span class="material-symbols-outlined" aria-hidden="true">close</span>
+    </button>
+  </div>
+
+  <nav class="flex-1 overflow-y-auto overscroll-contain py-2" aria-label="Mobile">
+    <a class="nav-link-mobile" href="/index.html" {{active:home}}>
+      Home <span class="material-symbols-outlined text-outline" aria-hidden="true">chevron_right</span>
+    </a>
+    <a class="nav-link-mobile" href="/about.html" {{active:about}}>
+      About <span class="material-symbols-outlined text-outline" aria-hidden="true">chevron_right</span>
+    </a>
+    <a class="nav-link-mobile" href="/products.html" {{active:products}}>
+      Products <span class="material-symbols-outlined text-outline" aria-hidden="true">chevron_right</span>
+    </a>
+    <a class="nav-link-mobile" href="/export-process.html" {{active:export-process}}>
+      Export Process <span class="material-symbols-outlined text-outline" aria-hidden="true">chevron_right</span>
+    </a>
+    <a class="nav-link-mobile" href="/global-reach.html" {{active:global-reach}}>
+      Global Reach <span class="material-symbols-outlined text-outline" aria-hidden="true">chevron_right</span>
+    </a>
+    <a class="nav-link-mobile" href="/quality.html" {{active:quality}}>
+      Quality &amp; Compliance <span class="material-symbols-outlined text-outline" aria-hidden="true">chevron_right</span>
+    </a>
+    <a class="nav-link-mobile" href="/contact.html" {{active:contact}}>
+      Contact Us <span class="material-symbols-outlined text-outline" aria-hidden="true">chevron_right</span>
+    </a>
+  </nav>
+
+  <div class="p-margin-mobile border-t border-outline-variant shrink-0 flex flex-col gap-3
+              pb-[max(theme(spacing.margin-mobile),env(safe-area-inset-bottom))]">
+    <a class="btn-primary w-full" href="/quote.html">Request a Quote</a>
+    <a
+      class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2 justify-center min-h-[44px]"
+      href="tel:+919876543210"
+    >
+      <span class="material-symbols-outlined text-secondary" aria-hidden="true">call</span>
+      +91 98765 43210
+    </a>
+  </div>
+</aside>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Request a Quote - PulseGlobal Trade</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#76849f",
+                        "tertiary-fixed-dim": "#7bd8b1",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#004f4f",
+                        "on-tertiary-fixed": "#002115",
+                        "surface-container-high": "#e6e8ea",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#d8dadc",
+                        "tertiary": "#000000",
+                        "secondary": "#006a6a",
+                        "inverse-primary": "#b9c7e4",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "primary-fixed": "#d6e3ff",
+                        "background": "#f7f9fb",
+                        "on-tertiary-container": "#339471",
+                        "primary-container": "#0d1c32",
+                        "on-primary-fixed": "#0d1c32",
+                        "surface-bright": "#f7f9fb",
+                        "on-surface-variant": "#44474d",
+                        "outline-variant": "#c5c6cd",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#97f5cc",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f2f4f6",
+                        "primary": "#000000",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#76d6d5",
+                        "tertiary-container": "#002115",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary-fixed-variant": "#00513a",
+                        "on-background": "#191c1e",
+                        "on-primary-fixed-variant": "#39475f",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "on-secondary-container": "#006e6e",
+                        "surface-tint": "#515f78",
+                        "outline": "#75777e",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container": "#eceef0",
+                        "inverse-on-surface": "#eff1f3",
+                        "inverse-surface": "#2d3133",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#93f2f2",
+                        "on-surface": "#191c1e",
+                        "secondary-container": "#90efef",
+                        "on-secondary-fixed": "#002020"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "stack-md": "12px",
+                        "margin-desktop": "64px",
+                        "stack-lg": "24px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "stack-sm": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "display-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-md": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Custom form inputs */
+        input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+            @apply w-full bg-surface-container-lowest border border-outline-variant rounded-DEFAULT px-4 py-3 font-body-md text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary transition-all outline-none;
+        }
+        label {
+            @apply block font-label-md text-on-surface-variant mb-stack-sm;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col antialiased">
+<!-- TopAppBar (Transactional - Nav hidden, Brand only) -->
+<header class="bg-surface-container-lowest w-full z-50 shadow-sm border-b border-outline-variant fixed top-0 h-20 flex justify-center items-center">
+<div class="px-margin-desktop max-w-container-max w-full">
+<div class="text-headline-sm font-headline-sm font-bold text-primary">PulseGlobal</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow pt-[120px] pb-margin-desktop px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="mb-stack-lg">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-stack-sm">Request a Quote</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">Provide details about your logistics requirements, and our global trade specialists will construct a tailored proposal within 24 hours.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Form Section -->
+<div class="lg:col-span-8 space-y-stack-lg">
+<!-- B2B Form Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-gutter border border-surface-container-highest">
+<form action="#" class="space-y-stack-lg" method="POST">
+<!-- Contact Info -->
+<div class="space-y-stack-md">
+<h2 class="font-title-lg text-title-lg text-primary border-b border-outline-variant pb-stack-sm">1. Company &amp; Contact Details</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div>
+<label for="firstName">First Name</label>
+<input id="firstName" name="firstName" required="" type="text"/>
+</div>
+<div>
+<label for="lastName">Last Name</label>
+<input id="lastName" name="lastName" required="" type="text"/>
+</div>
+<div class="md:col-span-2">
+<label for="companyName">Company Name</label>
+<input id="companyName" name="companyName" required="" type="text"/>
+</div>
+<div>
+<label for="email">Business Email</label>
+<input id="email" name="email" required="" type="email"/>
+</div>
+<div>
+<label for="phone">Phone Number</label>
+<input id="phone" name="phone" type="tel"/>
+</div>
+</div>
+</div>
+<!-- Product Requirement -->
+<div class="space-y-stack-md pt-stack-md">
+<h2 class="font-title-lg text-title-lg text-primary border-b border-outline-variant pb-stack-sm">2. Shipment Details</h2>
+<div class="grid grid-cols-1 gap-gutter">
+<div>
+<label for="commodity">Commodity / Product Description</label>
+<input id="commodity" name="commodity" placeholder="e.g., Electronics, Heavy Machinery, Textiles" required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div>
+<label for="origin">Origin (City/Port)</label>
+<input id="origin" name="origin" required="" type="text"/>
+</div>
+<div>
+<label for="destination">Destination (City/Port)</label>
+<input id="destination" name="destination" required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div>
+<label for="weight">Est. Weight (kg)</label>
+<input id="weight" name="weight" type="text"/>
+</div>
+<div>
+<label for="volume">Est. Volume (cbm)</label>
+<input id="volume" name="volume" type="text"/>
+</div>
+<div>
+<label for="containerType">Container Type</label>
+<select id="containerType" name="containerType">
+<option value="">Select...</option>
+<option value="fcl">FCL (Full Container)</option>
+<option value="lcl">LCL (Less than Container)</option>
+<option value="air">Air Freight</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<!-- Additional Info -->
+<div class="space-y-stack-md pt-stack-md">
+<h2 class="font-title-lg text-title-lg text-primary border-b border-outline-variant pb-stack-sm">3. Additional Requirements</h2>
+<div>
+<label for="notes">Special Handling or Instructions</label>
+<textarea id="notes" name="notes" placeholder="Temperature control, hazardous materials, specific delivery dates..." rows="4"></textarea>
+</div>
+</div>
+<!-- Submit Action -->
+<div class="pt-stack-md flex justify-end">
+<button class="bg-primary-container text-on-primary hover:bg-secondary transition-colors duration-200 px-8 py-3 rounded-DEFAULT font-label-md text-label-md flex items-center gap-2" type="submit">
+                                Request Quote
+                                <span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Sidebar -->
+<div class="lg:col-span-4 space-y-stack-lg">
+<!-- What Happens Next -->
+<div class="bg-surface-container-low rounded-xl p-gutter border border-surface-container-high">
+<h3 class="font-title-lg text-title-lg text-primary mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="pending_actions">pending_actions</span>
+                        What Happens Next?
+                    </h3>
+<div class="space-y-stack-md relative before:absolute before:inset-0 before:ml-[11px] before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-outline-variant before:to-transparent">
+<!-- Step 1 -->
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+<div class="flex items-center justify-center w-6 h-6 rounded-full border-2 border-surface-container-lowest bg-secondary shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm z-10">
+<span class="font-label-sm text-label-sm text-on-secondary">1</span>
+</div>
+<div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-1.5rem)] p-3 rounded-lg bg-surface-container-lowest border border-outline-variant shadow-sm z-10 ml-4 md:ml-0">
+<h4 class="font-label-md text-label-md text-primary">Review</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 text-sm">Specialists analyze your logistics requirements.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+<div class="flex items-center justify-center w-6 h-6 rounded-full border-2 border-surface-container-lowest bg-surface-container-high shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm z-10">
+<span class="font-label-sm text-label-sm text-on-surface-variant">2</span>
+</div>
+<div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-1.5rem)] p-3 rounded-lg bg-transparent z-10 ml-4 md:ml-0">
+<h4 class="font-label-md text-label-md text-on-surface">Contact</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 text-sm">We reach out for any necessary clarifications.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+<div class="flex items-center justify-center w-6 h-6 rounded-full border-2 border-surface-container-lowest bg-surface-container-high shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm z-10">
+<span class="font-label-sm text-label-sm text-on-surface-variant">3</span>
+</div>
+<div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-1.5rem)] p-3 rounded-lg bg-transparent z-10 ml-4 md:ml-0">
+<h4 class="font-label-md text-label-md text-on-surface">Options</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 text-sm">You receive tailored routing and pricing options.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Trust Indicators -->
+<div class="bg-surface-container-lowest rounded-xl p-gutter border border-surface-container-highest shadow-sm">
+<div class="flex items-start gap-4 mb-stack-md">
+<span class="material-symbols-outlined text-secondary text-[24px]" data-icon="lock" data-weight="fill">lock</span>
+<div>
+<h4 class="font-label-md text-label-md text-primary">Strict Confidentiality</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mt-1">Your supply chain data is encrypted and handled under strict NDA protocols.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary text-[24px]" data-icon="verified" data-weight="fill">verified</span>
+<div>
+<h4 class="font-label-md text-label-md text-primary">Verified Network</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mt-1">Access to tier-1 global carriers and secure routing channels.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 bg-primary-container dark:bg-primary-container grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto mt-auto">
+<div>
+<div class="font-headline-sm text-headline-sm text-surface-container-lowest mb-stack-md">PulseGlobal</div>
+<p class="font-body-md text-body-md text-on-primary-container dark:text-on-primary-container opacity-80 text-sm">© 2024 PulseGlobal Trade. All rights reserved.</p>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Company</a>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Products</a>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Export</a>
+<a class="font-body-md text-body-md text-tertiary-fixed font-bold hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Contact</a>
+</div>
+</footer>
+</body></html>

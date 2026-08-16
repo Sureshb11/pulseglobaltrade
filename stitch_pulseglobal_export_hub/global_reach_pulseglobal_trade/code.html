@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PulseGlobal Trade - Global Reach</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#76849f",
+                        "tertiary-fixed-dim": "#7bd8b1",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#004f4f",
+                        "on-tertiary-fixed": "#002115",
+                        "surface-container-high": "#e6e8ea",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#d8dadc",
+                        "tertiary": "#000000",
+                        "secondary": "#006a6a",
+                        "inverse-primary": "#b9c7e4",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "primary-fixed": "#d6e3ff",
+                        "background": "#f7f9fb",
+                        "on-tertiary-container": "#339471",
+                        "primary-container": "#0d1c32",
+                        "on-primary-fixed": "#0d1c32",
+                        "surface-bright": "#f7f9fb",
+                        "on-surface-variant": "#44474d",
+                        "outline-variant": "#c5c6cd",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#97f5cc",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f2f4f6",
+                        "primary": "#000000",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#76d6d5",
+                        "tertiary-container": "#002115",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary-fixed-variant": "#00513a",
+                        "on-background": "#191c1e",
+                        "on-primary-fixed-variant": "#39475f",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "on-secondary-container": "#006e6e",
+                        "surface-tint": "#515f78",
+                        "outline": "#75777e",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container": "#eceef0",
+                        "inverse-on-surface": "#eff1f3",
+                        "inverse-surface": "#2d3133",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#93f2f2",
+                        "on-surface": "#191c1e",
+                        "secondary-container": "#90efef",
+                        "on-secondary-fixed": "#002020"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "stack-md": "12px",
+                        "margin-desktop": "64px",
+                        "stack-lg": "24px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "stack-sm": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "display-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-md": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #f7f9fb; }
+        .ambient-shadow { box-shadow: 0 4px 12px rgba(13, 28, 50, 0.04); }
+        .hover-shadow:hover { box-shadow: 0 8px 24px rgba(13, 28, 50, 0.08); border-color: rgba(13, 28, 50, 0.08); transform: translateY(-2px); }
+        .hero-bg { background: linear-gradient(135deg, #0d1c32 0%, #1a2a42 100%); }
+        .map-pattern { background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 24px 24px; }
+    </style>
+</head>
+<body class="font-sans text-on-surface antialiased flex flex-col min-h-screen">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest dark:bg-surface-container-lowest border-b border-outline-variant shadow-sm transition-shadow">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto md:px-margin-desktop px-margin-mobile">
+<div class="text-headline-sm font-headline-sm font-bold text-primary dark:text-on-primary-fixed">
+                PulseGlobal
+            </div>
+<nav class="hidden md:flex gap-8 items-center h-full font-label-md text-label-md">
+<a class="text-on-surface-variant dark:text-outline hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80 h-full flex items-center" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-outline hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80 h-full flex items-center" href="#">About</a>
+<a class="text-on-surface-variant dark:text-outline hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80 h-full flex items-center" href="#">Products</a>
+<a class="text-on-surface-variant dark:text-outline hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80 h-full flex items-center" href="#">Export Process</a>
+<!-- Active Item -->
+<a class="text-secondary dark:text-on-secondary-container border-b-2 border-secondary h-full flex items-center pt-[2px] cursor-pointer active:opacity-80" href="#">Global Reach</a>
+<a class="text-on-surface-variant dark:text-outline hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80 h-full flex items-center" href="#">Quality</a>
+</nav>
+<div class="hidden md:flex items-center gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface rounded-full border border-outline-variant text-label-md font-label-md focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/20 w-48 transition-all" placeholder="Search..." type="text"/>
+</div>
+<button class="bg-primary-container text-on-primary hover:bg-[#008080] font-label-md text-label-md px-6 py-2.5 rounded-DEFAULT transition-colors duration-200 cursor-pointer">
+                    Request a Quote
+                </button>
+</div>
+<button class="md:hidden text-on-surface-variant">
+<span class="material-symbols-outlined text-headline-sm">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="hero-bg text-on-primary pt-24 pb-32 px-margin-mobile md:px-margin-desktop relative overflow-hidden">
+<div class="max-w-container-max mx-auto relative z-10 text-center">
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-[#C5A059] mb-stack-md">Global Logistics Network</p>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-stack-lg max-w-4xl mx-auto leading-tight">
+                    From India to Markets <br/><span class="text-inverse-primary">Around the World</span>
+</h1>
+<p class="font-body-lg text-body-lg text-surface-container-high max-w-2xl mx-auto mb-stack-lg opacity-90">
+                    Connecting premium Indian suppliers with discerning global buyers through a resilient, transparent, and highly efficient trade network.
+                </p>
+<div class="flex justify-center gap-4">
+<button class="bg-[#C5A059] text-primary-container font-label-md text-label-md px-8 py-3 rounded-DEFAULT hover:bg-[#d4b373] transition-colors font-medium">Explore Regions</button>
+<button class="border border-outline-variant text-on-primary hover:bg-white/10 font-label-md text-label-md px-8 py-3 rounded-DEFAULT transition-colors flex items-center gap-2">
+                        View Trade Routes <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Decorative Map abstraction in background -->
+<div class="absolute inset-0 opacity-10 map-pattern pointer-events-none"></div>
+</section>
+<!-- Stats Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop -mt-16 relative z-20 mb-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="bg-surface-container-lowest p-6 rounded-lg ambient-shadow border border-surface-container-highest flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-[32px] text-secondary mb-3">globe_asia</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">45+</h3>
+<p class="font-label-md text-label-md text-on-surface-variant">Global Markets</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg ambient-shadow border border-surface-container-highest flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-[32px] text-secondary mb-3">factory</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">120+</h3>
+<p class="font-label-md text-label-md text-on-surface-variant">Reliable Suppliers</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg ambient-shadow border border-surface-container-highest flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-[32px] text-secondary mb-3">verified</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">100%</h3>
+<p class="font-label-md text-label-md text-on-surface-variant">Quality Checked</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg ambient-shadow border border-surface-container-highest flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-[32px] text-secondary mb-3">local_shipping</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">50k+</h3>
+<p class="font-label-md text-label-md text-on-surface-variant">Metric Tons Exported</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-primary-container dark:bg-primary-container w-full py-16 mt-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<div class="font-headline-sm text-headline-sm text-surface-container-lowest">
+                    PulseGlobal
+                </div>
+<p class="font-label-sm text-label-sm text-on-primary-container opacity-80 mt-2">
+                    © 2024 PulseGlobal Trade. All rights reserved.
+                </p>
+</div>
+<div class="col-span-1 md:col-span-3 flex flex-wrap gap-8 md:justify-end items-center h-full">
+<nav class="flex gap-6 font-body-md text-body-md text-on-primary-container opacity-80">
+<a class="hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Company</a>
+<a class="hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Products</a>
+<a class="text-tertiary-fixed font-bold hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Export</a>
+<a class="hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Contact</a>
+</nav>
+</div>
+</div>
+</footer>
+</body></html>

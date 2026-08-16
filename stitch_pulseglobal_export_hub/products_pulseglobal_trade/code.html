@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PulseGlobal Trade - Products</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "on-primary-container": "#76849f",
+                            "tertiary-fixed-dim": "#7bd8b1",
+                            "on-secondary": "#ffffff",
+                            "on-secondary-fixed-variant": "#004f4f",
+                            "on-tertiary-fixed": "#002115",
+                            "surface-container-high": "#e6e8ea",
+                            "error": "#ba1a1a",
+                            "surface-dim": "#d8dadc",
+                            "tertiary": "#000000",
+                            "secondary": "#006a6a",
+                            "inverse-primary": "#b9c7e4",
+                            "on-tertiary": "#ffffff",
+                            "on-error": "#ffffff",
+                            "surface": "#f7f9fb",
+                            "primary-fixed": "#d6e3ff",
+                            "background": "#f7f9fb",
+                            "on-tertiary-container": "#339471",
+                            "primary-container": "#0d1c32",
+                            "on-primary-fixed": "#0d1c32",
+                            "surface-bright": "#f7f9fb",
+                            "on-surface-variant": "#44474d",
+                            "outline-variant": "#c5c6cd",
+                            "on-primary": "#ffffff",
+                            "tertiary-fixed": "#97f5cc",
+                            "on-error-container": "#93000a",
+                            "surface-container-low": "#f2f4f6",
+                            "primary": "#000000",
+                            "surface-container-lowest": "#ffffff",
+                            "secondary-fixed-dim": "#76d6d5",
+                            "tertiary-container": "#002115",
+                            "surface-container-highest": "#e0e3e5",
+                            "on-tertiary-fixed-variant": "#00513a",
+                            "on-background": "#191c1e",
+                            "on-primary-fixed-variant": "#39475f",
+                            "primary-fixed-dim": "#b9c7e4",
+                            "on-secondary-container": "#006e6e",
+                            "surface-tint": "#515f78",
+                            "outline": "#75777e",
+                            "surface-variant": "#e0e3e5",
+                            "surface-container": "#eceef0",
+                            "inverse-on-surface": "#eff1f3",
+                            "inverse-surface": "#2d3133",
+                            "error-container": "#ffdad6",
+                            "secondary-fixed": "#93f2f2",
+                            "on-surface": "#191c1e",
+                            "secondary-container": "#90efef",
+                            "on-secondary-fixed": "#002020"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "base": "8px",
+                            "container-max": "1280px",
+                            "stack-md": "12px",
+                            "margin-desktop": "64px",
+                            "stack-lg": "24px",
+                            "gutter": "24px",
+                            "margin-mobile": "20px",
+                            "stack-sm": "4px"
+                    },
+                    "fontFamily": {
+                            "headline-sm": ["Inter"],
+                            "display-lg": ["Inter"],
+                            "label-sm": ["Inter"],
+                            "body-md": ["Inter"],
+                            "label-md": ["Inter"],
+                            "headline-md": ["Inter"],
+                            "body-lg": ["Inter"],
+                            "title-lg": ["Inter"],
+                            "display-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                            "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                            "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                            "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                            "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                            "headline-md": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                            "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                            "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .group:hover .scale-bg { transform: scale(1.05); }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md text-body-md antialiased">
+<!-- TopNavBar -->
+<nav class="bg-surface-container-lowest dark:bg-surface-container-lowest fixed top-0 w-full z-50 border-b border-outline-variant shadow-sm">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto md:px-margin-desktop px-margin-mobile">
+<div class="text-headline-sm font-headline-sm font-bold text-primary dark:text-on-primary-fixed">
+                PulseGlobal
+            </div>
+<div class="hidden md:flex gap-8 font-label-md text-label-md">
+<a class="text-on-surface-variant dark:text-outline hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-outline hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80" href="#">About</a>
+<a class="text-secondary dark:text-on-secondary-container border-b-2 border-secondary pb-1 hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Products</a>
+<a class="text-on-surface-variant dark:text-outline hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Export Process</a>
+<a class="text-on-surface-variant dark:text-outline hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Global Reach</a>
+<a class="text-on-surface-variant dark:text-outline hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Quality</a>
+</div>
+<div class="hidden md:flex items-center gap-4">
+<button class="bg-primary-container text-on-primary hover:bg-secondary transition-colors duration-200 px-6 py-2 rounded font-label-md text-label-md">
+                    Request a Quote
+                </button>
+</div>
+<div class="md:hidden flex items-center">
+<span class="material-symbols-outlined cursor-pointer text-primary">menu</span>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-[120px] pb-32">
+<!-- Header Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop md:px-margin-desktop px-margin-mobile mb-stack-lg">
+<div class="max-w-3xl">
+<nav aria-label="Breadcrumb" class="flex text-on-surface-variant font-label-sm text-label-sm uppercase mb-stack-md">
+<ol class="inline-flex items-center space-x-1 md:space-x-2">
+<li class="inline-flex items-center">
+<a class="hover:text-secondary transition-colors" href="#">Home</a>
+</li>
+<li>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[16px] mx-1">chevron_right</span>
+<span class="text-[#C5A059]">Products</span>
+</div>
+</li>
+</ol>
+</nav>
+<h1 class="font-display-lg text-display-lg md:font-display-lg md:text-display-lg font-display-lg-mobile text-display-lg-mobile text-primary mb-stack-md">
+                    Products from India, Prepared for Global Markets.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Discover our extensive catalog of high-quality exports, meticulously sourced and verified for international trade compliance.
+                </p>
+</div>
+</section>
+<!-- Filters Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop md:px-margin-desktop px-margin-mobile mb-stack-lg">
+<div class="bg-surface-container-lowest p-stack-md rounded-lg shadow-[0_4px_12px_rgba(10,25,47,0.04)] border border-outline-variant/30 flex flex-col md:flex-row gap-gutter items-end">
+<div class="w-full md:w-1/3">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-stack-sm">Category</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-bright border border-outline-variant/50 rounded px-4 py-2 font-body-md text-body-md text-primary focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/20 transition-all cursor-pointer">
+<option>All Categories</option>
+<option>Food &amp; Agriculture</option>
+<option>Spices &amp; Seasonings</option>
+<option>Textiles &amp; Apparel</option>
+<option>Industrial Materials</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<div class="w-full md:w-1/3">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-stack-sm">Minimum Order Quantity (MOQ)</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-bright border border-outline-variant/50 rounded px-4 py-2 font-body-md text-body-md text-primary focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/20 transition-all cursor-pointer">
+<option>Any MOQ</option>
+<option>Under 1 Ton</option>
+<option>1 - 5 Tons</option>
+<option>5+ Tons</option>
+<option>FCL (Full Container Load)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<div class="w-full md:w-1/3">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-stack-sm">Certification Required</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-bright border border-outline-variant/50 rounded px-4 py-2 font-body-md text-body-md text-primary focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/20 transition-all cursor-pointer">
+<option>None Specific</option>
+<option>ISO 9001</option>
+<option>Organic Certified</option>
+<option>Fair Trade</option>
+<option>HACCP</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<div class="w-full md:w-auto">
+<button class="w-full md:w-auto bg-surface-container-high text-on-surface hover:bg-surface-dim transition-colors px-6 py-2 rounded font-label-md text-label-md flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                        Apply
+                    </button>
+</div>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="max-w-container-max mx-auto px-margin-desktop md:px-margin-desktop px-margin-mobile">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_4px_12px_rgba(10,25,47,0.04)] hover:shadow-[0_8px_24px_rgba(10,25,47,0.08)] border border-transparent hover:border-primary-container/10 transition-all duration-300 flex flex-col h-full cursor-pointer">
+<div class="relative h-64 overflow-hidden bg-surface-container">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full scale-bg transition-transform duration-500 ease-out" data-alt="A high-quality, editorial style close-up photograph of vibrant, premium Indian spices like turmeric, cardamom, and saffron arranged neatly in small ceramic bowls on a clean, light off-white surface. The lighting is soft and natural, emphasizing the rich textures and deep colors of the spices against a minimalist, corporate-modern background. The overall mood is sophisticated, clean, and authoritative, suitable for a B2B agricultural export catalog." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKrlaDpMSBUKbSfT5VJE_qTARW9hUenDktHD3JFNeRgdDPkcbsHqsYDmB5tmszfDjEP22HCyyFhyVR63FlFZQFqgFM4bIvkU4ehQlakjZGJ7bxmOivC0JYJMSS0bjA5Eqgk8TG-T5e7ZXI8B8r5yTolHZrwZ5fxFnwh0pr2f_y0ffdjGjDy5RmRaxc8wUVafulVeaMueIvCGBIu-Z-Cf_hMthS2pbVA7P9qVKQ74Ij1gHPwqckrYorig')"></div>
+<div class="absolute inset-0 bg-primary-container/20 group-hover:bg-primary-container/10 transition-colors duration-300"></div>
+<div class="absolute top-4 left-4">
+<span class="bg-[#006a6a] text-white font-label-sm text-label-sm px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">Verified Origin</span>
+</div>
+</div>
+<div class="p-stack-lg flex flex-col flex-grow">
+<h3 class="font-title-lg text-title-lg text-primary mb-stack-sm">Premium Spices &amp; Seasonings</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-stack-md">
+                            Sourced directly from certified farms across India. Includes high-grade Turmeric, Cardamom, Cumin, and proprietary blends tailored for commercial use.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant">MOQ: 1 Ton</span>
+<button class="text-[#C5A059] font-label-md text-label-md flex items-center gap-1 group-hover:gap-2 transition-all">
+                                View Products
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_4px_12px_rgba(10,25,47,0.04)] hover:shadow-[0_8px_24px_rgba(10,25,47,0.08)] border border-transparent hover:border-primary-container/10 transition-all duration-300 flex flex-col h-full cursor-pointer">
+<div class="relative h-64 overflow-hidden bg-surface-container">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full scale-bg transition-transform duration-500 ease-out" data-alt="A professional, minimalist photograph showing neatly stacked bales of premium raw cotton in a clean, modern warehouse setting. The lighting is bright and even, highlighting the pure white texture of the cotton against a soft off-white background with subtle structural lines. The aesthetic is industrial yet highly refined and pristine, conveying institutional stability and high-volume B2B trade capacity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwyqiIVSyIiOxGkNeh1zpHDHnO6GXVzgy4-idJhhfZC3ALaZ0ZuT2WV6Gmn00PUhMF1upz3sR5bwlHtFILWcPluwQtG1HohCOJpIB93j_YRD1WfMdt-6vIrvgzNfqUAL0nfFvL929FHQnXJaiBPKzXyCbPUijVeXXuCSN5_fQnvkixpfrAMSwnRRIUn095FebOrY1pjUwr8AHpHYt4cuWiIjrLUMIMTb9jBhzhpjX7smY9FyBUwN3nEQ')"></div>
+<div class="absolute inset-0 bg-primary-container/20 group-hover:bg-primary-container/10 transition-colors duration-300"></div>
+<div class="absolute top-4 left-4">
+<span class="bg-[#006a6a] text-white font-label-sm text-label-sm px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">ISO Certified</span>
+</div>
+</div>
+<div class="p-stack-lg flex flex-col flex-grow">
+<h3 class="font-title-lg text-title-lg text-primary mb-stack-sm">Textiles &amp; Raw Fibers</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-stack-md">
+                            High-quality raw cotton, specialized technical yarns, and woven fabrics engineered for global manufacturing and fashion supply chains.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant">MOQ: 1 FCL</span>
+<button class="text-[#C5A059] font-label-md text-label-md flex items-center gap-1 group-hover:gap-2 transition-all">
+                                View Products
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_4px_12px_rgba(10,25,47,0.04)] hover:shadow-[0_8px_24px_rgba(10,25,47,0.08)] border border-transparent hover:border-primary-container/10 transition-all duration-300 flex flex-col h-full cursor-pointer">
+<div class="relative h-64 overflow-hidden bg-surface-container">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full scale-bg transition-transform duration-500 ease-out" data-alt="A sleek, macro shot of golden wheat grains and polished rice spilling elegantly from a modern burlap sack onto a pristine white surface. The image uses a cool-tone overlay with crisp lighting to emphasize cleanliness and quality control. The background features expansive whitespace and subtle depth, evoking a premium, editorial feel suitable for an international food commodities catalog." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAB8-soCv5CfICkjIs6Pna1KX82JkJ3Ud-9HUlfMfQVC8ATwPhYaJpYV_tCi5vDIU_56bw4-Aph-9HhbT4p2xbfEybpDhyIvhTYpRmycbXHH87_VGem4sDsMGU0-2FX1f9Ck3NyTG7c9xM8CapX26MarK5wEr_E1AXhNVz8-vNYocNTpQsT_hnAfuh0hN3NUn74iE7aGyjjjiz3Eyeno1TGOtvjY-cGQ27ZpNyQ2kYk81Mz0kLWD0StLw')"></div>
+<div class="absolute inset-0 bg-primary-container/20 group-hover:bg-primary-container/10 transition-colors duration-300"></div>
+</div>
+<div class="p-stack-lg flex flex-col flex-grow">
+<h3 class="font-title-lg text-title-lg text-primary mb-stack-sm">Food &amp; Agriculture</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-stack-md">
+                            Bulk commodities including Basmati rice, pulses, and grains. Processed in state-of-the-art facilities meeting international food safety standards.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant">MOQ: 5 Tons</span>
+<button class="text-[#C5A059] font-label-md text-label-md flex items-center gap-1 group-hover:gap-2 transition-all">
+                                View Products
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop md:px-margin-desktop px-margin-mobile mt-32">
+<div class="bg-primary-container rounded-2xl p-12 text-center relative overflow-hidden">
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="font-headline-md text-headline-md text-on-primary mb-stack-sm">
+                        Request a Custom Sourcing Solution
+                    </h2>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-stack-lg">
+                        Can't find a specific product? Our sourcing experts can locate, verify, and manage logistics for specialized requirements across India.
+                    </p>
+<button class="bg-[#C5A059] text-primary-container hover:bg-white transition-colors duration-200 px-8 py-3 rounded font-label-md text-label-md font-bold inline-flex items-center gap-2">
+                        Consult Expert
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- Decorative subtle shapes -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
+<div class="absolute bottom-0 left-0 w-48 h-48 bg-secondary/10 rounded-full translate-y-1/2 -translate-x-1/4 blur-xl"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container dark:bg-primary-container w-full py-16">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto md:px-margin-desktop px-margin-mobile">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-sm text-headline-sm text-surface-container-lowest mb-stack-md">
+                    PulseGlobal
+                </div>
+<p class="font-body-md text-body-md text-on-primary-container opacity-80 mt-4">
+                    Elevating international trade through precision, transparency, and global reach.
+                </p>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-md text-label-md font-bold text-surface-container-lowest mb-stack-md uppercase tracking-wider">Links</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Company</a></li>
+<li><a class="font-body-md text-body-md text-tertiary-fixed font-bold hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Products</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Export</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="col-span-1 md:col-span-2 flex flex-col justify-between">
+<div>
+<h4 class="font-label-md text-label-md font-bold text-surface-container-lowest mb-stack-md uppercase tracking-wider">Subscribe to Market Insights</h4>
+<div class="flex gap-2">
+<input class="bg-primary-container border border-on-primary-container/30 text-surface-container-lowest placeholder-on-primary-container/50 px-4 py-2 rounded focus:outline-none focus:border-tertiary-fixed focus:ring-1 focus:ring-tertiary-fixed w-full max-w-xs font-body-md text-body-md" placeholder="Business Email" type="email"/>
+<button class="bg-surface-container-lowest text-primary-container px-4 py-2 rounded font-label-md text-label-md hover:bg-surface-dim transition-colors">Subscribe</button>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-on-primary-container/20 font-body-md text-body-md text-on-primary-container opacity-80">
+                    © 2024 PulseGlobal Trade. All rights reserved.
+                </div>
+</div>
+</div>
+</footer>
+</body></html>

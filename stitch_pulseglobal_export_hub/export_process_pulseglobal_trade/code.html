@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Export Process - PulseGlobal Trade</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-container": "#76849f",
+                      "tertiary-fixed-dim": "#7bd8b1",
+                      "on-secondary": "#ffffff",
+                      "on-secondary-fixed-variant": "#004f4f",
+                      "on-tertiary-fixed": "#002115",
+                      "surface-container-high": "#e6e8ea",
+                      "error": "#ba1a1a",
+                      "surface-dim": "#d8dadc",
+                      "tertiary": "#000000",
+                      "secondary": "#006a6a",
+                      "inverse-primary": "#b9c7e4",
+                      "on-tertiary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "surface": "#f7f9fb",
+                      "primary-fixed": "#d6e3ff",
+                      "background": "#f7f9fb",
+                      "on-tertiary-container": "#339471",
+                      "primary-container": "#0d1c32",
+                      "on-primary-fixed": "#0d1c32",
+                      "surface-bright": "#f7f9fb",
+                      "on-surface-variant": "#44474d",
+                      "outline-variant": "#c5c6cd",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed": "#97f5cc",
+                      "on-error-container": "#93000a",
+                      "surface-container-low": "#f2f4f6",
+                      "primary": "#000000",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed-dim": "#76d6d5",
+                      "tertiary-container": "#002115",
+                      "surface-container-highest": "#e0e3e5",
+                      "on-tertiary-fixed-variant": "#00513a",
+                      "on-background": "#191c1e",
+                      "on-primary-fixed-variant": "#39475f",
+                      "primary-fixed-dim": "#b9c7e4",
+                      "on-secondary-container": "#006e6e",
+                      "surface-tint": "#515f78",
+                      "outline": "#75777e",
+                      "surface-variant": "#e0e3e5",
+                      "surface-container": "#eceef0",
+                      "inverse-on-surface": "#eff1f3",
+                      "inverse-surface": "#2d3133",
+                      "error-container": "#ffdad6",
+                      "secondary-fixed": "#93f2f2",
+                      "on-surface": "#191c1e",
+                      "secondary-container": "#90efef",
+                      "on-secondary-fixed": "#002020"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "container-max": "1280px",
+                      "stack-md": "12px",
+                      "margin-desktop": "64px",
+                      "stack-lg": "24px",
+                      "gutter": "24px",
+                      "margin-mobile": "20px",
+                      "stack-sm": "4px"
+              },
+              "fontFamily": {
+                      "headline-sm": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-md": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "title-lg": ["Inter"],
+                      "display-lg-mobile": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                      "headline-md": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface-container-lowest dark:bg-surface-container-lowest fixed top-0 w-full z-50 border-b border-outline-variant shadow-sm flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto md:px-margin-desktop px-margin-mobile">
+<div class="text-headline-sm font-headline-sm font-bold text-primary dark:text-on-primary-fixed">PulseGlobal</div>
+<div class="hidden md:flex gap-gutter">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80" href="#">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Products</a>
+<a class="font-label-md text-label-md text-secondary dark:text-on-secondary-container border-b-2 border-secondary pb-1 hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Export Process</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Global Reach</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Quality</a>
+</div>
+<button class="bg-[#0A192F] text-on-primary font-label-md text-label-md px-4 py-2 rounded transition-colors duration-200 hover:bg-[#008080]">Request a Quote</button>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-[100px] md:pt-[120px]">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg md:py-[64px]">
+<div class="flex flex-col md:flex-row gap-gutter items-center">
+<div class="w-full md:w-1/2 space-y-stack-md">
+<span class="font-label-sm text-label-sm uppercase text-[#C5A059] tracking-widest">Global Logistics Network</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-primary">From Sourcing to Shipment — We Handle It</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        Our comprehensive export process ensures your commodities are sourced, verified, and delivered with unyielding precision. We navigate the complexities of international trade so you don't have to.
+                    </p>
+<div class="pt-stack-md">
+<button class="bg-[#0A192F] text-on-primary font-label-md text-label-md px-6 py-3 rounded transition-colors duration-200 hover:bg-[#008080]">Explore the Network</button>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative">
+<div class="aspect-[4/3] rounded-xl overflow-hidden shadow-sm relative group bg-surface-container-high">
+<img class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-[1.05]" data-alt="A massive, modern container ship navigating through a calm, deep blue ocean under a clear sky. The scene is shot from a dramatic, low-angle perspective emphasizing the sheer scale of the global logistics operation. The lighting is bright and professional, adhering to a sophisticated corporate modern aesthetic with clean lines, crisp contrast, and subtle teal and navy tones reflecting the maritime setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBieWnVWQe6HptFbIivtXv89XndsmWTGGL3ZFS-cm9ux1Zn3_-dAqB4vZxWaGqH60GJQBOjj68Y_wU6vafmzpVg5xgfGl_x3_LKA8ECLVDjMDP6Gq9V0betKR5Lnnl_gXhPTw33YFiXcEVfEDt4PD83LrV2Gpnggn_kL7z6B0m8xRB7w-SdUujEveHvPJ0Gk0XFjeA3sxxnBmvJkS1gLpM4LUOcbCUrsb6C6HO9PcACE1MIQ9Bdo_zXYw"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Timeline Section -->
+<section class="bg-surface py-[64px] border-y border-surface-container-highest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-[48px] space-y-stack-sm">
+<h2 class="font-headline-md text-headline-md text-primary">The 6-Step Export Protocol</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">A synchronized approach to global trade efficiency.</p>
+</div>
+<div class="relative">
+<!-- Connecting Line -->
+<div class="hidden lg:block absolute top-[28px] left-[5%] right-[5%] h-[2px] bg-outline-variant z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-gutter relative z-10">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-[56px] h-[56px] rounded-full bg-surface-container-lowest border-2 border-outline-variant flex items-center justify-center mb-stack-md transition-colors group-hover:border-secondary group-hover:bg-primary-fixed shadow-sm">
+<span class="material-symbols-outlined text-primary group-hover:text-secondary transition-colors" data-weight="fill">assignment</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-stack-sm">Requirement</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Detailed analysis of client needs and market specifications.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-[56px] h-[56px] rounded-full bg-surface-container-lowest border-2 border-outline-variant flex items-center justify-center mb-stack-md transition-colors group-hover:border-secondary group-hover:bg-primary-fixed shadow-sm">
+<span class="material-symbols-outlined text-primary group-hover:text-secondary transition-colors" data-weight="fill">search</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-stack-sm">Sourcing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Identifying prime agricultural zones and securing premium yields.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-[56px] h-[56px] rounded-full bg-surface-container-lowest border-2 border-outline-variant flex items-center justify-center mb-stack-md transition-colors group-hover:border-secondary group-hover:bg-primary-fixed shadow-sm">
+<span class="material-symbols-outlined text-primary group-hover:text-secondary transition-colors" data-weight="fill">fact_check</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-stack-sm">Inspection</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Rigorous multi-point quality control and lab verification.</p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-[56px] h-[56px] rounded-full bg-surface-container-lowest border-2 border-outline-variant flex items-center justify-center mb-stack-md transition-colors group-hover:border-secondary group-hover:bg-primary-fixed shadow-sm">
+<span class="material-symbols-outlined text-primary group-hover:text-secondary transition-colors" data-weight="fill">inventory_2</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-stack-sm">Packaging</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Climate-controlled, secure packing designed for long transit.</p>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-[56px] h-[56px] rounded-full bg-surface-container-lowest border-2 border-outline-variant flex items-center justify-center mb-stack-md transition-colors group-hover:border-secondary group-hover:bg-primary-fixed shadow-sm">
+<span class="material-symbols-outlined text-primary group-hover:text-secondary transition-colors" data-weight="fill">description</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-stack-sm">Documentation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Flawless execution of customs, phytosanitary, and trade docs.</p>
+</div>
+<!-- Step 6 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-[56px] h-[56px] rounded-full bg-surface-container-lowest border-2 border-outline-variant flex items-center justify-center mb-stack-md transition-colors group-hover:border-secondary group-hover:bg-primary-fixed shadow-sm">
+<span class="material-symbols-outlined text-primary group-hover:text-secondary transition-colors" data-weight="fill">directions_boat</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-stack-sm">Shipment</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Optimized routing and real-time tracking to final destination.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container dark:bg-primary-container w-full py-16 grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-sm text-headline-sm text-surface-container-lowest mb-stack-md">PulseGlobal</div>
+<p class="font-body-md text-body-md text-on-primary-container opacity-80">© 2024 PulseGlobal Trade. All rights reserved.</p>
+</div>
+<div class="col-span-1 md:col-span-3 grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="flex flex-col space-y-stack-sm">
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Company</a>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Products</a>
+<a class="font-body-md text-body-md text-tertiary-fixed font-bold hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Export</a>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

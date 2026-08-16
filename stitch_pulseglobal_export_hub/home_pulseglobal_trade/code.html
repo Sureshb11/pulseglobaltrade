@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PulseGlobal Trade - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#76849f",
+                        "tertiary-fixed-dim": "#7bd8b1",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#004f4f",
+                        "on-tertiary-fixed": "#002115",
+                        "surface-container-high": "#e6e8ea",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#d8dadc",
+                        "tertiary": "#000000",
+                        "secondary": "#006a6a",
+                        "inverse-primary": "#b9c7e4",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "primary-fixed": "#d6e3ff",
+                        "background": "#f7f9fb",
+                        "on-tertiary-container": "#339471",
+                        "primary-container": "#0d1c32",
+                        "on-primary-fixed": "#0d1c32",
+                        "surface-bright": "#f7f9fb",
+                        "on-surface-variant": "#44474d",
+                        "outline-variant": "#c5c6cd",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#97f5cc",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f2f4f6",
+                        "primary": "#000000",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#76d6d5",
+                        "tertiary-container": "#002115",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary-fixed-variant": "#00513a",
+                        "on-background": "#191c1e",
+                        "on-primary-fixed-variant": "#39475f",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "on-secondary-container": "#006e6e",
+                        "surface-tint": "#515f78",
+                        "outline": "#75777e",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container": "#eceef0",
+                        "inverse-on-surface": "#eff1f3",
+                        "inverse-surface": "#2d3133",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#93f2f2",
+                        "on-surface": "#191c1e",
+                        "secondary-container": "#90efef",
+                        "on-secondary-fixed": "#002020"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "stack-md": "12px",
+                        "margin-desktop": "64px",
+                        "stack-lg": "24px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "stack-sm": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "display-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-md": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Custom Styles for Interactive Elements */
+        .btn-primary {
+            @apply bg-primary-container text-on-primary hover:bg-[#008080] transition-colors duration-200 px-6 py-3 rounded-lg font-label-md text-label-md;
+        }
+        .btn-secondary {
+            @apply border border-[#C5A059] text-primary hover:bg-[#C5A059] hover:text-white transition-colors duration-200 px-6 py-3 rounded-lg font-label-md text-label-md flex items-center gap-2;
+        }
+        .card-hover {
+            @apply transition-all duration-300 hover:shadow-md hover:-translate-y-1;
+        }
+        .image-zoom-container {
+            @apply overflow-hidden rounded-2xl;
+        }
+        .image-zoom {
+            @apply transition-transform duration-500 hover:scale-105;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest dark:bg-surface-container-lowest border-b border-outline-variant shadow-sm transition-all duration-300" id="main-header">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand -->
+<a class="font-headline-sm text-headline-sm font-bold text-primary dark:text-on-primary-fixed flex items-center gap-2" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">language</span>
+                PulseGlobal
+            </a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex gap-8">
+<a class="text-secondary dark:text-on-secondary-container border-b-2 border-secondary pb-1 font-label-md text-label-md hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-outline font-label-md text-label-md hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80" href="#">About</a>
+<a class="text-on-surface-variant dark:text-outline font-label-md text-label-md hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Products</a>
+<a class="text-on-surface-variant dark:text-outline font-label-md text-label-md hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Export Process</a>
+<a class="text-on-surface-variant dark:text-outline font-label-md text-label-md hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Global Reach</a>
+<a class="text-on-surface-variant dark:text-outline font-label-md text-label-md hover:text-secondary dark:hover:text-on-secondary-container transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Quality</a>
+</nav>
+<!-- Actions -->
+<div class="hidden md:flex items-center gap-4">
+<button aria-label="Search" class="material-symbols-outlined text-on-surface-variant hover:text-secondary transition-colors">search</button>
+<button class="btn-primary">Request a Quote</button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button aria-label="Menu" class="md:hidden material-symbols-outlined text-primary">menu</button>
+</div>
+</header>
+<main class="pt-20"> <!-- Padding to account for fixed header -->
+<!-- Hero Section -->
+<section class="relative w-full min-h-[80vh] flex items-center justify-center overflow-hidden bg-primary-container">
+<!-- Background Image with Gradient Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center absolute inset-0" data-alt="A sweeping, high-angle cinematic shot of a massive modern shipping port at dawn. Rows of colorful shipping containers stretch toward the horizon, illuminated by soft, golden morning light that contrasts with the deep, cool navy blues of the ocean and industrial structures. A colossal cargo vessel is moored gracefully. The aesthetic is premium corporate logistics, conveying scale, global reach, and institutional reliability. High-resolution photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCBCY3-ymyAcRZ1dqGA4KxYKxd9hF1Y8A9rmKo3xEgdoIThNlqGsCbcIZnjbgkEP42L6Wi1GViEsxBv8E17C66wVi_E3_HLDH-UDbq4CPVx8actpadPpflpNMXDHJiFpGTnSBJ4W-3935CoPrmmNrnLv7uXI41hI2UomguqOrz8N1Fq3ccV8jUAAyfpBpmfzMO5-tFiRBFw1837MozMLZ5GBOCkKACi2di09AL5v-fHmW8fhBCatJxJA')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container/90 to-primary-container/40"></div>
+</div>
+<!-- Content -->
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full grid md:grid-cols-2 gap-gutter">
+<div class="flex flex-col gap-stack-lg text-white">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-[#C5A059] flex items-center gap-2">
+<span class="w-8 h-px bg-[#C5A059]"></span> Global Sourcing Partner
+                    </span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-white leading-tight">
+                        Quality from India.<br/>Delivered to the World.
+                    </h1>
+<p class="font-body-lg text-body-lg text-inverse-primary max-w-xl">
+                        Connecting global buyers with premium, reliable sourcing from India. We ensure quality, streamline logistics, and deliver customized trade solutions with unwavering institutional stability.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="btn-primary flex items-center gap-2">
+                            Request a Quote <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="btn-secondary text-white border-white hover:bg-white hover:text-primary-container">
+                            Explore Products
+                        </button>
+</div>
+</div>
+</div>
+<!-- Global Trade Visual Animation Placeholder -->
+<div class="absolute bottom-0 right-0 w-full md:w-1/2 h-64 md:h-full opacity-30 z-0 pointer-events-none">
+<!-- STITCH_SHADER_START:ANIMATION_2 class="absolute inset-0 w-full h-full" -->
+<div class="absolute inset-0 w-full h-full" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_2" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_2');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+uniform float u_time;
+uniform vec2 u_resolution;
+uniform vec2 u_mouse;
+varying vec2 v_texCoord;
+
+// PulseGlobal Map Shader
+// Visualizes India to Global connections with glowing lines
+
+float line(vec2 p, vec2 a, vec2 b, float width) {
+    vec2 pa = p - a, ba = b - a;
+    float h = clamp(dot(pa, ba) / dot(ba, ba), 0.0, 1.0);
+    return smoothstep(width, 0.0, length(pa - ba * h));
+}
+
+void main() {
+    vec2 uv = v_texCoord;
+    vec3 color = vec3(0.04, 0.1, 0.18); // Deep Navy background
+    
+    // India position (approx center-ish for visual)
+    vec2 india = vec2(0.6, 0.45);
+    
+    // Target markets
+    vec2 markets[6];
+    markets[0] = vec2(0.4, 0.5);  // Middle East
+    markets[1] = vec2(0.3, 0.7);  // Europe
+    markets[2] = vec2(0.4, 0.3);  // Africa
+    markets[3] = vec2(0.8, 0.4);  // SE Asia
+    markets[4] = vec2(0.2, 0.6);  // North America
+    markets[5] = vec2(0.7, 0.6);  // East Asia
+
+    float glow = 0.0;
+    for(int i = 0; i < 6; i++) {
+        float l = line(uv, india, markets[i], 0.002);
+        float pulse = 0.5 + 0.5 * sin(u_time * 2.0 + float(i));
+        glow += l * pulse;
+        
+        // Market dots
+        float d = length(uv - markets[i]);
+        glow += smoothstep(0.015, 0.0, d) * pulse * 0.5;
+    }
+    
+    // India dot
+    float dIndia = length(uv - india);
+    glow += smoothstep(0.02, 0.0, dIndia) * (0.8 + 0.2 * sin(u_time * 3.0));
+    
+    // Subtle grid/dots
+    vec2 grid = fract(uv * 40.0) - 0.5;
+    float dots = smoothstep(0.1, 0.0, length(grid)) * 0.1;
+    
+    color += dots;
+    color += glow * vec3(0.0, 0.5, 0.5); // Teal glow
+    color += glow * 0.2 * vec3(0.77, 0.63, 0.35); // Subtle Gold highlights
+    
+    gl_FragColor = vec4(color, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_2 -->
+</div>
+</section>
+<!-- Company Intro (Who We Are) -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-16 items-center">
+<!-- Imagery Left -->
+<div class="relative image-zoom-container h-[500px]">
+<div class="w-full h-full bg-cover bg-center image-zoom" data-alt="A detailed, macro photography shot of vibrant Indian spices—turmeric, cumin, and cardamom—arranged meticulously in pristine, minimalist ceramic bowls. The lighting is soft and natural, casting subtle ambient shadows on a crisp white surface. The image exudes high-end culinary sourcing, purity, and modern editorial elegance, utilizing a sophisticated color palette of rich earth tones against a clean, off-white background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDE7dlh6UrtPJkr4Rd0Akj8Sz34AlvvW3iPxa3_5hc5CnjBX4n9CZ_FhjNRsfLWasPNg2kejl1CjMlrXj_acMP8b0tqFn9XY8a1L4V8HDKrTsw70bDUw9RfHJbkSGkM5og8Lq_jtJRi268LbG7Pvn-9NhVMoXHBCgD1ewSZK5JGD1SxwsnPvsjb4_oECWnB44XUFIxH5-jTlMj_LAdIihX1zc-myQzOD2nmVNaUNGA2lpkzmfl62UXz6g')"></div>
+<!-- Decorative Element -->
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-[#F8FAFC] rounded-2xl flex items-center justify-center shadow-sm border border-outline-variant/20">
+<span class="material-symbols-outlined text-5xl text-secondary">handshake</span>
+</div>
+</div>
+<!-- Content Right -->
+<div class="flex flex-col gap-stack-md">
+<h2 class="font-label-sm text-label-sm uppercase tracking-widest text-[#C5A059]">Who We Are</h2>
+<h3 class="font-headline-md text-headline-md text-primary">Your Bridge to Premium Indian Sourcing</h3>
+<div class="w-16 h-1 bg-secondary mt-2 mb-4"></div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        PulseGlobal Trade stands at the intersection of India's rich manufacturing heritage and the rigorous demands of the global market. We are not just exporters; we are strategic sourcing partners dedicated to bridging the gap with uncompromising quality and transparency.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Our extensive network across agricultural, textile, and industrial sectors allows us to procure the finest goods, while our modern logistics infrastructure ensures they arrive precisely when and where you need them. We navigate the complexities of international trade so you don't have to.
+                    </p>
+<div class="mt-6">
+<button class="btn-secondary inline-flex w-auto">
+                            Learn About Our Process <span class="material-symbols-outlined">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us Grid -->
+<section class="py-24 bg-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Section Header -->
+<div class="text-center max-w-2xl mx-auto mb-16 flex flex-col gap-stack-sm items-center">
+<h2 class="font-label-sm text-label-sm uppercase tracking-widest text-[#C5A059]">The PulseGlobal Advantage</h2>
+<h3 class="font-headline-md text-headline-md text-primary">Why Choose Us</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                        We deliver a competitive edge through rigorous standards, deep market expertise, and an unwavering commitment to your success.
+                    </p>
+</div>
+<!-- 6-Card Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant/10 card-hover flex flex-col gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-primary">Quality Assured</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Every product undergoes stringent multi-stage quality checks to meet international standards before dispatch.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant/10 card-hover flex flex-col gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">hub</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-primary">Reliable Sourcing</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Direct relationships with vetted manufacturers and farmers ensure authentic, consistent supply chains.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant/10 card-hover flex flex-col gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-primary">Competitive Pricing</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Efficient operations and scale allow us to offer highly competitive pricing without compromising quality.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant/10 card-hover flex flex-col gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">tune</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-primary">Customized Solutions</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Tailored packaging, private labeling, and flexible volume requirements to fit your exact business needs.</p>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant/10 card-hover flex flex-col gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">description</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-primary">Export Expertise</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Seamless navigation of customs, documentation, and compliance, ensuring frictionless international transit.</p>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant/10 card-hover flex flex-col gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-primary">Timely Delivery</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Optimized logistics networks and proactive tracking guarantee your shipments arrive exactly on schedule.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Products Section (Bento Grid Style) -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex justify-between items-end mb-12">
+<div class="flex flex-col gap-stack-sm">
+<h2 class="font-label-sm text-label-sm uppercase tracking-widest text-[#C5A059]">Our Portfolio</h2>
+<h3 class="font-headline-md text-headline-md text-primary">Premium Categories</h3>
+</div>
+<button class="btn-secondary hidden md:flex">View All Products</button>
+</div>
+<!-- Asymmetric Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-auto md:h-[600px]">
+<!-- Large Feature: Food & Ag -->
+<div class="md:col-span-2 relative image-zoom-container rounded-2xl group overflow-hidden h-64 md:h-full">
+<div class="w-full h-full bg-cover bg-center image-zoom absolute inset-0" data-alt="A sweeping, cinematic view of a modern, highly organized agricultural processing facility. Sacks of premium grains and pulses are stacked symmetrically in an immaculate, bright warehouse environment. The lighting is crisp and cool, casting soft ambient shadows that highlight the pristine condition of the goods. The aesthetic is corporate industrial, emphasizing scale, hygiene, and institutional reliability within a sophisticated light-mode palette." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-Us84Df44C0qyUCQBS5wANVd80exI1AH5eNvpq31NX1vhMeuKg8Wj1iKLE--2LXEQ2kShu0-YNANDdjVi8hED3MHgVP9GV7mJIQ0FdCVg7TZfLa4MyhSgcnxqLs5_Qzk6Omw4yLBwW3tluMoPsP4IQUvK90rq-C06DsfpratnSBGDUZynqCv8b_WmpXj6et9LiNi4hJtElNNtxOA0382dTJfwSlf2lag93GdtxMfZ4pELhrHa-Pvilw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/90 via-primary-container/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 flex flex-col gap-2">
+<h4 class="font-title-lg text-title-lg text-white">Food &amp; Agricultural</h4>
+<p class="font-body-md text-body-md text-inverse-primary max-w-md hidden md:block">Premium grains, pulses, and fresh produce sourced directly from vetted farming collectives.</p>
+<a class="font-label-md text-label-md text-[#C5A059] flex items-center gap-1 mt-2 hover:text-white transition-colors" href="#">Explore Category <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<!-- Stacked Right Column -->
+<div class="flex flex-col gap-6 h-full">
+<!-- Spices -->
+<div class="relative image-zoom-container rounded-2xl group overflow-hidden flex-1 min-h-[250px]">
+<div class="w-full h-full bg-cover bg-center image-zoom absolute inset-0" data-alt="A minimalist, high-end editorial shot of whole spices, specifically star anise and cinnamon sticks, resting on a clean, cool-grey slate surface. The lighting is dramatic but soft, creating refined ambient shadows that emphasize texture. The color palette is tight, focusing on the rich warm browns of the spices contrasting sharply against the pristine, modern background, evoking premium culinary exports." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD9bFKduApFmRkcMwYEGOLgsbu0ccYJsCx8jQA1p5XlL4b0LNjVcnre_rEEHENWsr4ikzIE6h8FnJE4HwdArNWqRWJvEN9hCjwLNGc02IkOm-KzBfEcJf-rJ7eFXafoSBhZB_WRXA-PdsKzuCSfWGFPQpi07TC57Oy447I0S98mBgFxDHI7VhO9Pjim4UqirbWLO7FNbt_Urlx-o9OkmY045QGO1M1sDnzTy3ERWFk0VT6ZB_F92T2tWg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 flex flex-col gap-1">
+<h4 class="font-title-lg text-title-lg text-white">Spices &amp; Condiments</h4>
+<a class="font-label-md text-label-md text-[#C5A059] flex items-center gap-1 hover:text-white transition-colors" href="#">Explore <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<!-- Textiles -->
+<div class="relative image-zoom-container rounded-2xl group overflow-hidden flex-1 min-h-[250px]">
+<div class="w-full h-full bg-cover bg-center image-zoom absolute inset-0" data-alt="A close-up, highly detailed view of premium woven textile fabrics folded neatly. The fabrics feature subtle, modern patterns in a refined palette of deep navy, crisp white, and soft grey. The lighting is even and bright, highlighting the quality of the weave and texture. The overall mood is modern, clean, and industrial-chic, representing high-quality textile manufacturing and export." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDvc_G4524FIHI3MhNBpVbXMUKOkdVcJ3zpVL9VFBk0jAkk_f-v6pZO5fCCQlgWCeaoPlCGR4ZwdciKXhPgi_uS_aQ9OyWD-BLE1h3m_XRBd8PEkzwwlFKtaYg-WcMx_PIP6iFu-X8F2R4zrRmpEoHlIcFED_MHjvHe2WpzAViWSoFARM2Xd1NqStP29xZliBGa9Rmg0QVUx1c0V6fsHVDh-1KKRT8uVwGnG13nBSADxD_yTlmRr8UAJw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 flex flex-col gap-1">
+<h4 class="font-title-lg text-title-lg text-white">Textiles &amp; Garments</h4>
+<a class="font-label-md text-label-md text-[#C5A059] flex items-center gap-1 hover:text-white transition-colors" href="#">Explore <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</div>
+<button class="btn-secondary w-full md:hidden mt-8 justify-center">View All Products</button>
+</div>
+</section>
+<!-- Conversion Section -->
+<section class="py-24 bg-primary-container relative overflow-hidden">
+<!-- Subtle background pattern -->
+<div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10 text-center flex flex-col items-center gap-stack-lg">
+<span class="material-symbols-outlined text-5xl text-[#C5A059] mb-2">travel_explore</span>
+<h2 class="font-headline-md text-headline-md text-white max-w-2xl">Looking for Something Specific from India?</h2>
+<p class="font-body-lg text-body-lg text-inverse-primary max-w-xl">
+                    Our extensive sourcing network can procure customized products to meet your exact specifications. Let our experts find exactly what you need.
+                </p>
+<div class="mt-4 flex flex-wrap gap-4 justify-center">
+<button class="btn-primary bg-white text-primary-container hover:bg-surface-dim hover:text-primary-container font-bold px-8">
+                        Tell Us What You Need
+                    </button>
+<button class="btn-secondary text-white border-white hover:bg-white hover:text-primary-container px-8">
+                        Contact Sales
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container dark:bg-primary-container w-full py-16">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand Column -->
+<div class="flex flex-col gap-4 col-span-1 md:col-span-1">
+<div class="font-headline-sm text-headline-sm text-surface-container-lowest flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">language</span>
+                    PulseGlobal
+                </div>
+<p class="font-body-md text-body-md text-on-primary-container opacity-80 mt-2">
+                    Elevating global trade through trusted sourcing, uncompromising quality, and seamless logistics from India to the world.
+                </p>
+</div>
+<!-- Quick Links -->
+<div class="flex flex-col gap-4">
+<h4 class="font-title-lg text-title-lg text-surface-container-lowest mb-2">Company</h4>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">About Us</a>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Our Network</a>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Quality Standards</a>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Careers</a>
+</div>
+<!-- Products Links -->
+<div class="flex flex-col gap-4">
+<h4 class="font-title-lg text-title-lg text-surface-container-lowest mb-2">Products</h4>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Food &amp; Agricultural</a>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Spices &amp; Condiments</a>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Textiles &amp; Garments</a>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Industrial Goods</a>
+</div>
+<!-- Contact & Legal -->
+<div class="flex flex-col gap-4">
+<h4 class="font-title-lg text-title-lg text-surface-container-lowest mb-2">Contact</h4>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer flex items-center gap-2" href="#"><span class="material-symbols-outlined text-sm">mail</span> sales@pulseglobal.com</a>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer flex items-center gap-2" href="#"><span class="material-symbols-outlined text-sm">location_on</span> Mumbai, India HQ</a>
+<div class="mt-8 border-t border-surface-tint pt-4">
+<p class="font-body-md text-body-md text-on-primary-container opacity-60 text-sm">
+                        © 2024 PulseGlobal Trade. All rights reserved.
+                    </p>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

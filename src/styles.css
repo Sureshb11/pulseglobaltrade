@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Fixed 80px header — anchor targets must clear it. */
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-on-background font-sans text-body-md antialiased
+      min-h-[100dvh] flex flex-col;
+    /* Nothing in this design is meant to scroll sideways. */
+    overflow-x: hidden;
+  }
+
+  /* Short pages still push the footer to the bottom. */
+  body > main {
+    @apply flex-1;
+  }
+
+  /* Keep decorative overflow (blurred blobs, zoomed images) from widening
+     the viewport on narrow screens. */
+  main,
+  footer,
+  header {
+    @apply max-w-full;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-secondary ring-offset-2 ring-offset-background;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    /* Icons must not shrink inside flex rows or grow with fluid text. */
+    font-size: 24px;
+    line-height: 1;
+    flex-shrink: 0;
+    user-select: none;
+  }
+
+  .material-symbols-outlined.fill,
+  .material-symbols-outlined[data-weight='fill'] {
+    font-variation-settings: 'FILL' 1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* ---------- Layout ---------- */
+
+  /* The single source of truth for page gutters: 20px on mobile, 64px at md+.
+     The export applied `px-margin-desktop` unconditionally, which ate 128px of
+     a 375px screen. */
+  .container-page {
+    @apply w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  /* ---------- Buttons ---------- */
+  /* 44px minimum height throughout — the export's py-2 buttons were 36px,
+     under the touch-target floor. */
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 min-h-[44px] px-6 py-3
+      rounded font-label-md text-label-md text-center
+      transition-colors duration-200 cursor-pointer select-none;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary-container text-on-primary hover:bg-teal active:opacity-90;
+  }
+
+  .btn-secondary {
+    @apply btn border border-gold text-gold hover:bg-gold hover:text-white active:opacity-90;
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent text-primary-container border border-outline-variant
+      hover:bg-surface-container;
+  }
+
+  /* On-dark variants */
+  .btn-on-dark {
+    @apply btn bg-white text-primary-container hover:bg-surface-dim font-semibold;
+  }
+
+  .btn-outline-on-dark {
+    @apply btn border border-white/70 text-white hover:bg-white hover:text-primary-container;
+  }
+
+  .btn-gold {
+    @apply btn bg-gold text-primary-container hover:bg-gold-light font-semibold;
+  }
+
+  /* ---------- Cards ---------- */
+
+  .card {
+    @apply bg-surface-container-lowest rounded-lg border border-outline-variant/30
+      shadow-ambient-1;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-ambient-2 hover:-translate-y-1;
+  }
+
+  .image-zoom-container {
+    @apply overflow-hidden rounded-lg;
+  }
+
+  .image-zoom {
+    @apply transition-transform duration-500;
+  }
+
+  /* Hover zoom is a pointer affordance; on touch it just leaves the image
+     mis-scaled after a tap. */
+  @media (hover: hover) and (pointer: fine) {
+    .image-zoom:hover,
+    .group:hover .image-zoom {
+      @apply scale-105;
+    }
+  }
+
+  /* ---------- Eyebrow / section headings ---------- */
+
+  .eyebrow {
+    @apply font-label-sm text-label-sm uppercase tracking-widest text-gold;
+  }
+
+  /* Display headline: mobile size by default, full size from md up. */
+  .h-display {
+    @apply font-display-lg text-display-lg-mobile md:text-display-lg;
+  }
+
+  .h-headline {
+    @apply font-headline-md text-headline-md-mobile md:text-headline-md;
+  }
+
+  /* ---------- Forms ---------- */
+
+  .field-label {
+    @apply block font-label-md text-label-md text-on-surface-variant mb-stack-sm;
+  }
+
+  .field {
+    /* 16px text prevents iOS Safari from zooming the viewport on focus. */
+    @apply w-full bg-surface-container-lowest border border-outline-variant
+      rounded px-4 py-3 text-body-md text-on-surface min-h-[44px]
+      transition-shadow duration-200
+      focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20;
+  }
+
+  select.field {
+    @apply appearance-none pr-10 cursor-pointer bg-surface-container-lowest;
+  }
+
+  textarea.field {
+    @apply resize-y min-h-[120px];
+  }
+
+  .select-wrap {
+    @apply relative;
+  }
+
+  .select-wrap > .material-symbols-outlined {
+    @apply absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant;
+  }
+
+  /* ---------- Navigation ---------- */
+
+  .nav-link {
+    @apply relative flex items-center font-label-md text-label-md text-on-surface-variant
+      hover:text-secondary transition-colors duration-200 cursor-pointer;
+  }
+
+  .nav-link[aria-current='page'] {
+    @apply text-secondary;
+  }
+
+  .nav-link[aria-current='page']::after {
+    content: '';
+    @apply absolute left-0 right-0 -bottom-1 h-0.5 bg-secondary rounded-full;
+  }
+
+  .nav-link-mobile {
+    @apply flex items-center justify-between min-h-[52px] px-margin-mobile
+      font-body-md text-body-md text-on-surface
+      border-b border-outline-variant/40
+      hover:bg-surface-container-low transition-colors;
+  }
+
+  .nav-link-mobile[aria-current='page'] {
+    @apply text-secondary font-semibold bg-surface-container-low
+      border-l-4 border-l-secondary pl-[calc(theme(spacing.margin-mobile)-4px)];
+  }
+
+  .footer-link {
+    @apply font-body-md text-body-md text-on-primary-container opacity-80
+      hover:text-tertiary-fixed hover:opacity-100 transition-colors duration-200
+      min-h-[36px] flex items-center;
+  }
+
+  .footer-link[aria-current='page'] {
+    @apply text-tertiary-fixed opacity-100 font-semibold;
+  }
+
+  /* Breadcrumb labels are 12px, so the anchor box alone is ~15px tall — under
+     the 24px WCAG 2.5.8 target minimum. Pad the hit area without moving the text. */
+  nav[aria-label='Breadcrumb'] a {
+    @apply inline-flex items-center min-h-[32px];
+  }
+
+  .footer-heading {
+    @apply font-label-md text-label-md text-surface-container-lowest uppercase
+      tracking-wider mb-stack-sm;
+  }
+}
+
+@layer utilities {
+  .hero-pattern {
+    background-image:
+      radial-gradient(circle at 10% 20%, rgba(0, 106, 106, 0.06) 0%, transparent 22%),
+      radial-gradient(circle at 90% 80%, rgba(0, 106, 106, 0.06) 0%, transparent 22%);
+  }
+
+  .hero-gradient {
+    background: linear-gradient(135deg, #0d1c32 0%, #1a2a42 100%);
+  }
+
+  .map-pattern {
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .dot-pattern {
+    background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0);
+    background-size: 32px 32px;
+  }
+
+  /* Horizontal scrollers (wide diagrams) get momentum scrolling and snap. */
+  .scroll-x {
+    @apply overflow-x-auto overscroll-x-contain snap-x snap-mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+}

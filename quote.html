@@ -1,0 +1,261 @@
+<!doctype html>
+<html
+  lang="en"
+  data-page="quote"
+  data-title="Request a Quote | PulseGlobal Trade"
+  data-description="Tell us your commodity, route and volume. PulseGlobal Trade's global trade specialists return a tailored proposal within 24 hours."
+>
+  <head>
+    <!-- @include partials/head.html -->
+  </head>
+  <body>
+    <!-- @include partials/header.html -->
+
+    <main class="pt-20">
+      <div class="container-page py-10 md:py-14">
+        <div class="mb-10 md:mb-12">
+          <nav aria-label="Breadcrumb" class="mb-stack-md">
+            <ol class="flex items-center gap-2 font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">
+              <li><a class="hover:text-secondary transition-colors" href="/index.html">Home</a></li>
+              <li aria-hidden="true"><span class="material-symbols-outlined text-[16px]">chevron_right</span></li>
+              <li class="text-gold font-semibold" aria-current="page">Request a Quote</li>
+            </ol>
+          </nav>
+          <h1 class="h-display text-primary mb-stack-sm">Request a Quote</h1>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+            Provide details about your logistics requirements, and our global trade specialists will
+            construct a tailored proposal within 24 hours.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-gutter">
+          <!-- Form -->
+          <div class="lg:col-span-8">
+            <div class="card p-5 sm:p-6 md:p-8">
+              <form class="flex flex-col gap-10" data-demo-form novalidate>
+                <!-- 1. Company & contact -->
+                <fieldset class="flex flex-col gap-stack-md">
+                  <legend class="w-full font-title-lg text-title-lg text-primary border-b border-outline-variant pb-stack-sm mb-stack-md">
+                    1. Company &amp; Contact Details
+                  </legend>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div>
+                      <label class="field-label" for="firstName">First Name</label>
+                      <input class="field" id="firstName" name="firstName" type="text" autocomplete="given-name" required />
+                    </div>
+                    <div>
+                      <label class="field-label" for="lastName">Last Name</label>
+                      <input class="field" id="lastName" name="lastName" type="text" autocomplete="family-name" required />
+                    </div>
+                    <div class="md:col-span-2">
+                      <label class="field-label" for="companyName">Company Name</label>
+                      <input class="field" id="companyName" name="companyName" type="text" autocomplete="organization" required />
+                    </div>
+                    <div>
+                      <label class="field-label" for="email">Business Email</label>
+                      <input class="field" id="email" name="email" type="email" autocomplete="email" inputmode="email" required />
+                    </div>
+                    <div>
+                      <label class="field-label" for="phone">Phone Number</label>
+                      <input class="field" id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" />
+                    </div>
+                  </div>
+                </fieldset>
+
+                <!-- 2. Shipment -->
+                <fieldset class="flex flex-col gap-stack-md">
+                  <legend class="w-full font-title-lg text-title-lg text-primary border-b border-outline-variant pb-stack-sm mb-stack-md">
+                    2. Shipment Details
+                  </legend>
+                  <div class="flex flex-col gap-5">
+                    <div>
+                      <label class="field-label" for="commodity">Commodity / Product Description</label>
+                      <input
+                        class="field"
+                        id="commodity"
+                        name="commodity"
+                        type="text"
+                        placeholder="e.g. Turmeric powder, raw cotton, machined components"
+                        required
+                      />
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                      <div>
+                        <label class="field-label" for="origin">Origin (City / Port)</label>
+                        <input class="field" id="origin" name="origin" type="text" required />
+                      </div>
+                      <div>
+                        <label class="field-label" for="destination">Destination (City / Port)</label>
+                        <input class="field" id="destination" name="destination" type="text" required />
+                      </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+                      <div>
+                        <label class="field-label" for="weight">Est. Weight (kg)</label>
+                        <input class="field" id="weight" name="weight" type="text" inputmode="numeric" />
+                      </div>
+                      <div>
+                        <label class="field-label" for="volume">Est. Volume (cbm)</label>
+                        <input class="field" id="volume" name="volume" type="text" inputmode="numeric" />
+                      </div>
+                      <div class="sm:col-span-2 md:col-span-1">
+                        <label class="field-label" for="containerType">Container Type</label>
+                        <div class="select-wrap">
+                          <select class="field" id="containerType" name="containerType">
+                            <option value="">Select…</option>
+                            <option value="fcl">FCL (Full Container)</option>
+                            <option value="lcl">LCL (Less than Container)</option>
+                            <option value="air">Air Freight</option>
+                          </select>
+                          <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <!-- 3. Additional -->
+                <fieldset class="flex flex-col gap-stack-md">
+                  <legend class="w-full font-title-lg text-title-lg text-primary border-b border-outline-variant pb-stack-sm mb-stack-md">
+                    3. Additional Requirements
+                  </legend>
+                  <div>
+                    <label class="field-label" for="notes">Special Handling or Instructions</label>
+                    <textarea
+                      class="field"
+                      id="notes"
+                      name="notes"
+                      rows="4"
+                      placeholder="Temperature control, hazardous materials, specific delivery dates…"
+                    ></textarea>
+                  </div>
+                </fieldset>
+
+                <p
+                  class="font-body-md text-body-md text-secondary bg-secondary-container/40 rounded px-4 py-3"
+                  data-form-status
+                  role="status"
+                  hidden
+                >
+                  Thank you — your request has been captured. A trade specialist will respond within
+                  24 hours. (This demo does not send data anywhere; wire the form to your CRM or
+                  mail service to go live.)
+                </p>
+
+                <div class="flex justify-stretch sm:justify-end">
+                  <button class="btn-primary w-full sm:w-auto px-8" type="submit">
+                    Request Quote
+                    <span class="material-symbols-outlined text-[20px]" aria-hidden="true">arrow_forward</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="lg:col-span-4 flex flex-col gap-6">
+            <!-- What happens next: a single vertical rail at every breakpoint.
+                 The export's alternating md: layout collapsed into overlapping
+                 nodes on narrow screens. -->
+            <section class="bg-surface-container-low rounded-lg p-6 border border-surface-container-high">
+              <h2 class="font-title-lg text-title-lg text-primary mb-stack-md flex items-center gap-2">
+                <span class="material-symbols-outlined text-secondary" aria-hidden="true">pending_actions</span>
+                What Happens Next?
+              </h2>
+              <ol class="relative flex flex-col gap-4 pl-2">
+                <li class="relative flex gap-4">
+                  <span class="absolute left-3 top-7 bottom-[-1.25rem] w-0.5 bg-outline-variant" aria-hidden="true"></span>
+                  <span
+                    class="relative z-10 flex items-center justify-center w-6 h-6 shrink-0 rounded-full
+                           bg-secondary text-on-secondary font-label-sm text-label-sm
+                           border-2 border-surface-container-lowest shadow-sm"
+                  >
+                    1
+                  </span>
+                  <div class="flex-1 p-3 rounded bg-surface-container-lowest border border-outline-variant shadow-ambient-1">
+                    <h3 class="font-label-md text-label-md text-primary">Review</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                      Specialists analyze your logistics requirements.
+                    </p>
+                  </div>
+                </li>
+                <li class="relative flex gap-4">
+                  <span class="absolute left-3 top-7 bottom-[-1.25rem] w-0.5 bg-outline-variant" aria-hidden="true"></span>
+                  <span
+                    class="relative z-10 flex items-center justify-center w-6 h-6 shrink-0 rounded-full
+                           bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm
+                           border-2 border-surface-container-lowest shadow-sm"
+                  >
+                    2
+                  </span>
+                  <div class="flex-1 p-3">
+                    <h3 class="font-label-md text-label-md text-on-surface">Contact</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                      We reach out for any necessary clarifications.
+                    </p>
+                  </div>
+                </li>
+                <li class="relative flex gap-4">
+                  <span
+                    class="relative z-10 flex items-center justify-center w-6 h-6 shrink-0 rounded-full
+                           bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm
+                           border-2 border-surface-container-lowest shadow-sm"
+                  >
+                    3
+                  </span>
+                  <div class="flex-1 p-3">
+                    <h3 class="font-label-md text-label-md text-on-surface">Options</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                      You receive tailored routing and pricing options.
+                    </p>
+                  </div>
+                </li>
+              </ol>
+            </section>
+
+            <!-- Trust -->
+            <section class="card p-6">
+              <h2 class="sr-only">Why work with us</h2>
+              <div class="flex items-start gap-4 mb-stack-md">
+                <span class="material-symbols-outlined fill text-secondary" aria-hidden="true">lock</span>
+                <div>
+                  <h3 class="font-label-md text-label-md text-primary">Strict Confidentiality</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                    Your supply chain data is encrypted and handled under strict NDA protocols.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined fill text-secondary" aria-hidden="true">verified</span>
+                <div>
+                  <h3 class="font-label-md text-label-md text-primary">Verified Network</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                    Access to tier-1 global carriers and secure routing channels.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Direct contact -->
+            <section class="bg-primary-container rounded-lg p-6 text-on-primary-container">
+              <h2 class="font-title-lg text-title-lg text-surface-container-lowest mb-2">
+                Prefer to talk it through?
+              </h2>
+              <p class="font-body-md text-body-md opacity-80 mb-4">
+                Our Mumbai desk is open Mon–Fri, 9:00 AM – 6:00 PM IST.
+              </p>
+              <a class="btn-outline-on-dark w-full" href="tel:+919876543210">
+                <span class="material-symbols-outlined text-[18px]" aria-hidden="true">call</span>
+                +91 98765 43210
+              </a>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <!-- @include partials/footer.html -->
+  </body>
+</html>

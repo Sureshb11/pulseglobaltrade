@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - PulseGlobal Trade</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-container": "#76849f",
+                      "tertiary-fixed-dim": "#7bd8b1",
+                      "on-secondary": "#ffffff",
+                      "on-secondary-fixed-variant": "#004f4f",
+                      "on-tertiary-fixed": "#002115",
+                      "surface-container-high": "#e6e8ea",
+                      "error": "#ba1a1a",
+                      "surface-dim": "#d8dadc",
+                      "tertiary": "#000000",
+                      "secondary": "#006a6a",
+                      "inverse-primary": "#b9c7e4",
+                      "on-tertiary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "surface": "#f7f9fb",
+                      "primary-fixed": "#d6e3ff",
+                      "background": "#f7f9fb",
+                      "on-tertiary-container": "#339471",
+                      "primary-container": "#0d1c32",
+                      "on-primary-fixed": "#0d1c32",
+                      "surface-bright": "#f7f9fb",
+                      "on-surface-variant": "#44474d",
+                      "outline-variant": "#c5c6cd",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed": "#97f5cc",
+                      "on-error-container": "#93000a",
+                      "surface-container-low": "#f2f4f6",
+                      "primary": "#000000",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed-dim": "#76d6d5",
+                      "tertiary-container": "#002115",
+                      "surface-container-highest": "#e0e3e5",
+                      "on-tertiary-fixed-variant": "#00513a",
+                      "on-background": "#191c1e",
+                      "on-primary-fixed-variant": "#39475f",
+                      "primary-fixed-dim": "#b9c7e4",
+                      "on-secondary-container": "#006e6e",
+                      "surface-tint": "#515f78",
+                      "outline": "#75777e",
+                      "surface-variant": "#e0e3e5",
+                      "surface-container": "#eceef0",
+                      "inverse-on-surface": "#eff1f3",
+                      "inverse-surface": "#2d3133",
+                      "error-container": "#ffdad6",
+                      "secondary-fixed": "#93f2f2",
+                      "on-surface": "#191c1e",
+                      "secondary-container": "#90efef",
+                      "on-secondary-fixed": "#002020"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "container-max": "1280px",
+                      "stack-md": "12px",
+                      "margin-desktop": "64px",
+                      "stack-lg": "24px",
+                      "gutter": "24px",
+                      "margin-mobile": "20px",
+                      "stack-sm": "4px"
+              },
+              "fontFamily": {
+                      "headline-sm": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-md": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "title-lg": ["Inter"],
+                      "display-lg-mobile": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                      "headline-md": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 12px rgba(13, 28, 50, 0.04);
+        }
+        
+        .nav-link-hover {
+            position: relative;
+        }
+        
+        .nav-link-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #006a6a; /* secondary */
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link-hover:hover::after {
+            width: 100%;
+        }
+
+        .gold-accent {
+            color: #C5A059;
+        }
+        .gold-border {
+            border-color: #C5A059;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #008080 !important;
+            box-shadow: 0 0 0 2px rgba(0, 128, 128, 0.1) !important;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface-container-lowest fixed top-0 w-full z-50 border-b border-outline-variant shadow-sm transition-all duration-300" id="main-nav">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand -->
+<a class="text-headline-sm font-headline-sm font-bold text-primary flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">public</span>
+                PulseGlobal
+            </a>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex items-center gap-8 font-label-md text-label-md">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 nav-link-hover cursor-pointer active:opacity-80" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 nav-link-hover cursor-pointer active:opacity-80" href="#">About</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 nav-link-hover cursor-pointer active:opacity-80" href="#">Products</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 nav-link-hover cursor-pointer active:opacity-80" href="#">Export Process</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 nav-link-hover cursor-pointer active:opacity-80" href="#">Global Reach</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 nav-link-hover cursor-pointer active:opacity-80" href="#">Quality</a>
+<a class="text-secondary border-b-2 border-secondary pb-1 cursor-pointer active:opacity-80 font-bold" href="#">Contact Us</a>
+</div>
+<!-- Primary Action -->
+<div class="hidden md:flex">
+<button class="bg-[#0A192F] text-white px-6 py-2 rounded font-label-md text-label-md hover:bg-[#008080] transition-colors duration-200 shadow-sm flex items-center gap-2">
+                    Request a Quote
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Breadcrumbs -->
+<div class="mb-stack-lg flex items-center gap-2 font-label-sm text-label-sm uppercase tracking-widest text-outline">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="gold-accent font-bold">Contact Us</span>
+</div>
+<!-- Hero Section -->
+<div class="mb-16 md:mb-24">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary mb-stack-md">
+                Let's Talk Global Trade
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Partner with PulseGlobal to streamline your international supply chain. Our logistics experts in India are ready to tailor solutions for your export needs.
+            </p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Contact Info & Map (7 columns) -->
+<div class="lg:col-span-7 flex flex-col gap-gutter">
+<!-- Contact Details Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Headquarters Card -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_4px_12px_rgba(13,28,50,0.04)] border border-outline-variant/30 hover:shadow-[0_8px_24px_rgba(13,28,50,0.08)] transition-shadow duration-300">
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-2">India Headquarters</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-1">Level 4, Trade Centre Building</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-1">Bandra Kurla Complex (BKC)</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Mumbai, Maharashtra 400051</p>
+</div>
+<!-- Contact Channels Card -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_4px_12px_rgba(13,28,50,0.04)] border border-outline-variant/30 hover:shadow-[0_8px_24px_rgba(13,28,50,0.08)] transition-shadow duration-300">
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">headset_mic</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-4">Get in Touch</h3>
+<div class="flex items-start gap-3 mb-4">
+<span class="material-symbols-outlined text-outline text-[20px] mt-0.5">mail</span>
+<div>
+<p class="font-label-sm text-label-sm text-outline uppercase">Business Inquiries</p>
+<a class="font-body-md text-body-md text-primary hover:text-secondary transition-colors" href="mailto:trade@pulseglobal.in">trade@pulseglobal.in</a>
+</div>
+</div>
+<div class="flex items-start gap-3 mb-4">
+<span class="material-symbols-outlined text-outline text-[20px] mt-0.5">call</span>
+<div>
+<p class="font-label-sm text-label-sm text-outline uppercase">Phone &amp; WhatsApp</p>
+<a class="font-body-md text-body-md text-primary hover:text-secondary transition-colors" href="tel:+919876543210">+91 98765 43210</a>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-outline text-[20px] mt-0.5">schedule</span>
+<div>
+<p class="font-label-sm text-label-sm text-outline uppercase">Business Hours</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Mon - Fri, 9:00 AM - 6:00 PM IST</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Container -->
+<div class="h-64 md:h-80 w-full rounded-xl overflow-hidden relative shadow-[0_4px_12px_rgba(13,28,50,0.04)] border border-outline-variant/30 group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-quality, professional satellite view or minimalist stylized map showing the Bandra Kurla Complex area in Mumbai, India. The map should have a sophisticated corporate aesthetic, using a subtle cool-tone color palette with deep navy blues, soft off-whites, and muted teals to match the brand identity. The lighting should be clean and bright, conveying a sense of modern global connectivity and institutional stability without any distracting bright primary colors." data-location="Mumbai" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0oLr8qqkD6IuJT28tJJy2XSTcX9XWrSsDyfqmgB_IQ-R3TneqMQ5dVYohajjvbCt5Z3hPqDWDYLohj6wTmuxI5S6ugzJePwVb7GslOjLDg1LZzOaMwY11H_-QeV_YQFu9HnNftahxi5D0dfe2pIQO-nr1QN_9rxW5EC1XYqBGqoHBO2WKMXoUwrNB-7xNJarCWE6LRomfQR9uAqhBS38Gus8Po4hNQtOHtiBAIdJhXIAiXFn9-MmMcg"/>
+<!-- Map Overlay Pin -->
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="bg-surface-container-lowest p-2 rounded-full shadow-lg mb-2 relative">
+<div class="absolute inset-0 rounded-full border-2 border-secondary animate-ping opacity-75"></div>
+<span class="material-symbols-outlined text-secondary text-2xl relative z-10" style="font-variation-settings: 'FILL' 1;">domain</span>
+</div>
+<div class="bg-[#0A192F] text-white font-label-sm text-label-sm px-3 py-1 rounded shadow-md whitespace-nowrap">
+                            Mumbai HQ
+                        </div>
+</div>
+</div>
+</div>
+<!-- Right Column: Contact Form (5 columns) -->
+<div class="lg:col-span-5">
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_4px_12px_rgba(13,28,50,0.04)] border border-outline-variant/30 h-full relative overflow-hidden">
+<!-- Decorative subtle accent -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-bl-full -mr-8 -mt-8 pointer-events-none"></div>
+<h2 class="font-headline-md text-headline-md text-primary mb-2 relative z-10">Send an Inquiry</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 relative z-10">Provide your logistics requirements, and our specialists will respond within 24 hours.</p>
+<form class="space-y-6 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-md text-label-md text-primary mb-2" for="first_name">First Name</label>
+<input class="w-full bg-surface border border-outline-variant/50 rounded-lg px-4 py-3 text-body-md text-primary focus:ring-0 transition-shadow bg-opacity-50" id="first_name" placeholder="Jane" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-2" for="last_name">Last Name</label>
+<input class="w-full bg-surface border border-outline-variant/50 rounded-lg px-4 py-3 text-body-md text-primary focus:ring-0 transition-shadow bg-opacity-50" id="last_name" placeholder="Doe" type="text"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-2" for="email">Business Email *</label>
+<input class="w-full bg-surface border border-outline-variant/50 rounded-lg px-4 py-3 text-body-md text-primary focus:ring-0 transition-shadow bg-opacity-50" id="email" placeholder="jane@company.com" required="" type="email"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-2" for="inquiry_type">Inquiry Type</label>
+<div class="relative">
+<select class="w-full bg-surface border border-outline-variant/50 rounded-lg px-4 py-3 text-body-md text-primary focus:ring-0 transition-shadow appearance-none bg-opacity-50" id="inquiry_type">
+<option disabled="" selected="" value="">Select an option</option>
+<option value="export">Export Logistics</option>
+<option value="import">Import Clearance</option>
+<option value="freight">Freight Forwarding</option>
+<option value="consulting">Trade Consulting</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 transform -translate-y-1/2 text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-2" for="message">Message</label>
+<textarea class="w-full bg-surface border border-outline-variant/50 rounded-lg px-4 py-3 text-body-md text-primary focus:ring-0 transition-shadow resize-none bg-opacity-50" id="message" placeholder="Tell us about your cargo volume, destination, and timeline..." rows="4"></textarea>
+</div>
+<button class="w-full bg-[#0A192F] text-white rounded-lg py-4 font-label-md text-label-md hover:bg-[#008080] transition-colors duration-200 shadow-sm flex items-center justify-center gap-2 group mt-4" type="submit">
+                            Submit Inquiry
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container text-on-primary-container font-body-md py-16 mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand Column -->
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<a class="font-headline-sm text-headline-sm text-surface-container-lowest flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-tertiary-fixed" style="font-variation-settings: 'FILL' 1;">public</span>
+                    PulseGlobal
+                </a>
+<p class="text-sm opacity-80 mt-2 max-w-xs">Navigating complex global trade networks with precision and reliability.</p>
+</div>
+<!-- Links Column -->
+<div class="col-span-1 flex flex-col gap-3">
+<h4 class="font-label-md text-label-md text-surface-container-lowest uppercase tracking-wider mb-2">Company</h4>
+<a class="text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">About Us</a>
+<a class="text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Leadership</a>
+<a class="text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Careers</a>
+</div>
+<!-- Links Column -->
+<div class="col-span-1 flex flex-col gap-3">
+<h4 class="font-label-md text-label-md text-surface-container-lowest uppercase tracking-wider mb-2">Services</h4>
+<a class="text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Products</a>
+<a class="text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Export Process</a>
+<a class="text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Global Reach</a>
+</div>
+<!-- Contact Column -->
+<div class="col-span-1 flex flex-col gap-3">
+<h4 class="font-label-md text-label-md text-surface-container-lowest uppercase tracking-wider mb-2">Contact</h4>
+<a class="text-tertiary-fixed font-bold hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Contact Us</a>
+<a class="text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Support Desk</a>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mt-12 pt-8 border-t border-on-primary-container/20 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-sm opacity-80">© 2024 PulseGlobal Trade. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="opacity-80 hover:text-tertiary-fixed transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">share</span></a>
+<a class="opacity-80 hover:text-tertiary-fixed transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">link</span></a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple script to handle sticky nav styling on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-md');
+                nav.classList.remove('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.add('shadow-sm');
+            }
+        });
+    </script>
+</body></html>

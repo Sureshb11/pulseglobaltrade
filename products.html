@@ -1,0 +1,240 @@
+<!doctype html>
+<html
+  lang="en"
+  data-page="products"
+  data-title="Products | PulseGlobal Trade"
+  data-description="Browse PulseGlobal Trade's export catalogue: premium spices, textiles and raw fibers, and bulk food and agricultural commodities — sourced, verified and compliance-checked for global markets."
+>
+  <head>
+    <!-- @include partials/head.html -->
+  </head>
+  <body>
+    <!-- @include partials/header.html -->
+
+    <main class="pt-20">
+      <!-- Header -->
+      <section class="container-page pt-10 md:pt-14">
+        <nav aria-label="Breadcrumb" class="mb-stack-md">
+          <ol class="flex items-center gap-2 font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">
+            <li><a class="hover:text-secondary transition-colors" href="/index.html">Home</a></li>
+            <li aria-hidden="true"><span class="material-symbols-outlined text-[16px]">chevron_right</span></li>
+            <li class="text-gold font-semibold" aria-current="page">Products</li>
+          </ol>
+        </nav>
+        <div class="max-w-3xl">
+          <h1 class="h-display text-primary mb-stack-md">
+            Products from India, Prepared for Global Markets.
+          </h1>
+          <p class="font-body-lg text-body-lg text-on-surface-variant">
+            Discover our extensive catalog of high-quality exports, meticulously sourced and verified
+            for international trade compliance.
+          </p>
+        </div>
+      </section>
+
+      <!-- Filters -->
+      <section class="container-page mt-8 md:mt-10">
+        <form
+          class="card p-4 md:p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_auto] gap-4 lg:gap-gutter lg:items-end"
+          data-demo-form
+        >
+          <div>
+            <label class="field-label" for="filter-category">Category</label>
+            <div class="select-wrap">
+              <select class="field" id="filter-category" name="category">
+                <option>All Categories</option>
+                <option>Food &amp; Agriculture</option>
+                <option>Spices &amp; Seasonings</option>
+                <option>Textiles &amp; Apparel</option>
+                <option>Industrial Materials</option>
+              </select>
+              <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+            </div>
+          </div>
+
+          <div>
+            <label class="field-label" for="filter-moq">Minimum Order Quantity</label>
+            <div class="select-wrap">
+              <select class="field" id="filter-moq" name="moq">
+                <option>Any MOQ</option>
+                <option>Under 1 Ton</option>
+                <option>1 – 5 Tons</option>
+                <option>5+ Tons</option>
+                <option>FCL (Full Container Load)</option>
+              </select>
+              <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+            </div>
+          </div>
+
+          <div>
+            <label class="field-label" for="filter-cert">Certification Required</label>
+            <div class="select-wrap">
+              <select class="field" id="filter-cert" name="certification">
+                <option>None Specific</option>
+                <option>ISO 9001</option>
+                <option>Organic Certified</option>
+                <option>Fair Trade</option>
+                <option>HACCP</option>
+              </select>
+              <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+            </div>
+          </div>
+
+          <button class="btn-ghost w-full lg:w-auto sm:col-span-2 lg:col-span-1" type="submit">
+            <span class="material-symbols-outlined text-[18px]" aria-hidden="true">filter_list</span>
+            Apply
+          </button>
+
+          <p
+            class="sm:col-span-2 lg:col-span-4 font-body-md text-body-md text-secondary
+                   bg-secondary-container/40 rounded px-4 py-3"
+            data-form-status
+            role="status"
+            hidden
+          >
+            Filters noted. This catalogue is a static preview — connect a product API to return live
+            results.
+          </p>
+        </form>
+      </section>
+
+      <!-- Product grid -->
+      <section class="container-page mt-10 md:mt-12">
+        <h2 class="sr-only">Product categories</h2>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+          <li class="group card card-hover overflow-hidden flex flex-col">
+            <a href="/product.html" class="flex flex-col h-full">
+              <div class="relative h-56 sm:h-64 overflow-hidden bg-surface-container image-zoom-container rounded-none">
+                <div
+                  class="absolute inset-0 bg-cover bg-center image-zoom"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKrlaDpMSBUKbSfT5VJE_qTARW9hUenDktHD3JFNeRgdDPkcbsHqsYDmB5tmszfDjEP22HCyyFhyVR63FlFZQFqgFM4bIvkU4ehQlakjZGJ7bxmOivC0JYJMSS0bjA5Eqgk8TG-T5e7ZXI8B8r5yTolHZrwZ5fxFnwh0pr2f_y0ffdjGjDy5RmRaxc8wUVafulVeaMueIvCGBIu-Z-Cf_hMthS2pbVA7P9qVKQ74Ij1gHPwqckrYorig');
+                  "
+                  role="img"
+                  aria-label="Premium Indian spices — turmeric, cardamom and saffron — in small ceramic bowls."
+                ></div>
+                <span
+                  class="absolute top-4 left-4 bg-secondary text-white font-label-sm text-label-sm
+                         px-3 py-1 rounded-full uppercase tracking-wider shadow-sm"
+                >
+                  Verified Origin
+                </span>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3 class="font-title-lg text-title-lg text-primary mb-stack-sm">
+                  Premium Spices &amp; Seasonings
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-stack-md">
+                  Sourced directly from certified farms across India. Includes high-grade Turmeric,
+                  Cardamom, Cumin, and proprietary blends tailored for commercial use.
+                </p>
+                <div class="flex items-center justify-between gap-3 mt-auto pt-2 border-t border-outline-variant/30">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">MOQ: 1 Ton</span>
+                  <span class="text-gold font-label-md text-label-md flex items-center gap-1">
+                    View Products
+                    <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="group card card-hover overflow-hidden flex flex-col">
+            <a href="/product.html" class="flex flex-col h-full">
+              <div class="relative h-56 sm:h-64 overflow-hidden bg-surface-container image-zoom-container rounded-none">
+                <div
+                  class="absolute inset-0 bg-cover bg-center image-zoom"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwyqiIVSyIiOxGkNeh1zpHDHnO6GXVzgy4-idJhhfZC3ALaZ0ZuT2WV6Gmn00PUhMF1upz3sR5bwlHtFILWcPluwQtG1HohCOJpIB93j_YRD1WfMdt-6vIrvgzNfqUAL0nfFvL929FHQnXJaiBPKzXyCbPUijVeXXuCSN5_fQnvkixpfrAMSwnRRIUn095FebOrY1pjUwr8AHpHYt4cuWiIjrLUMIMTb9jBhzhpjX7smY9FyBUwN3nEQ');
+                  "
+                  role="img"
+                  aria-label="Neatly stacked bales of premium raw cotton in a clean modern warehouse."
+                ></div>
+                <span
+                  class="absolute top-4 left-4 bg-secondary text-white font-label-sm text-label-sm
+                         px-3 py-1 rounded-full uppercase tracking-wider shadow-sm"
+                >
+                  ISO Certified
+                </span>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3 class="font-title-lg text-title-lg text-primary mb-stack-sm">
+                  Textiles &amp; Raw Fibers
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-stack-md">
+                  High-quality raw cotton, specialized technical yarns, and woven fabrics engineered
+                  for global manufacturing and fashion supply chains.
+                </p>
+                <div class="flex items-center justify-between gap-3 mt-auto pt-2 border-t border-outline-variant/30">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">MOQ: 1 FCL</span>
+                  <span class="text-gold font-label-md text-label-md flex items-center gap-1">
+                    View Products
+                    <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="group card card-hover overflow-hidden flex flex-col sm:col-span-2 lg:col-span-1">
+            <a href="/product.html" class="flex flex-col h-full">
+              <div class="relative h-56 sm:h-64 overflow-hidden bg-surface-container image-zoom-container rounded-none">
+                <div
+                  class="absolute inset-0 bg-cover bg-center image-zoom"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAB8-soCv5CfICkjIs6Pna1KX82JkJ3Ud-9HUlfMfQVC8ATwPhYaJpYV_tCi5vDIU_56bw4-Aph-9HhbT4p2xbfEybpDhyIvhTYpRmycbXHH87_VGem4sDsMGU0-2FX1f9Ck3NyTG7c9xM8CapX26MarK5wEr_E1AXhNVz8-vNYocNTpQsT_hnAfuh0hN3NUn74iE7aGyjjjiz3Eyeno1TGOtvjY-cGQ27ZpNyQ2kYk81Mz0kLWD0StLw');
+                  "
+                  role="img"
+                  aria-label="Golden wheat grains and polished rice spilling from a sack onto a white surface."
+                ></div>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3 class="font-title-lg text-title-lg text-primary mb-stack-sm">
+                  Food &amp; Agriculture
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-stack-md">
+                  Bulk commodities including Basmati rice, pulses, and grains. Processed in
+                  state-of-the-art facilities meeting international food safety standards.
+                </p>
+                <div class="flex items-center justify-between gap-3 mt-auto pt-2 border-t border-outline-variant/30">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">MOQ: 5 Tons</span>
+                  <span class="text-gold font-label-md text-label-md flex items-center gap-1">
+                    View Products
+                    <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- CTA -->
+      <section class="container-page mt-16 md:mt-24 mb-16 md:mb-24">
+        <div class="bg-primary-container rounded-lg p-8 md:p-12 text-center relative overflow-hidden">
+          <div class="relative z-10 max-w-2xl mx-auto">
+            <h2 class="h-headline text-on-primary mb-stack-sm">Request a Custom Sourcing Solution</h2>
+            <p class="font-body-lg text-body-lg text-on-primary-container mb-stack-lg">
+              Can't find a specific product? Our sourcing experts can locate, verify, and manage
+              logistics for specialized requirements across India.
+            </p>
+            <a class="btn-gold w-full sm:w-auto px-8" href="/quote.html">
+              Consult Expert
+              <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span>
+            </a>
+          </div>
+          <div
+            class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"
+            aria-hidden="true"
+          ></div>
+          <div
+            class="absolute bottom-0 left-0 w-48 h-48 bg-secondary/10 rounded-full translate-y-1/2 -translate-x-1/4 blur-xl"
+            aria-hidden="true"
+          ></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include partials/footer.html -->
+  </body>
+</html>

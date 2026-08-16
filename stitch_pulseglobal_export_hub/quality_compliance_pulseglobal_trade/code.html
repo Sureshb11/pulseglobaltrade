@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PulseGlobal Trade - Quality &amp; Compliance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#76849f",
+                        "tertiary-fixed-dim": "#7bd8b1",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#004f4f",
+                        "on-tertiary-fixed": "#002115",
+                        "surface-container-high": "#e6e8ea",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#d8dadc",
+                        "tertiary": "#000000",
+                        "secondary": "#006a6a",
+                        "inverse-primary": "#b9c7e4",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "primary-fixed": "#d6e3ff",
+                        "background": "#f7f9fb",
+                        "on-tertiary-container": "#339471",
+                        "primary-container": "#0d1c32",
+                        "on-primary-fixed": "#0d1c32",
+                        "surface-bright": "#f7f9fb",
+                        "on-surface-variant": "#44474d",
+                        "outline-variant": "#c5c6cd",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#97f5cc",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f2f4f6",
+                        "primary": "#000000",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#76d6d5",
+                        "tertiary-container": "#002115",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary-fixed-variant": "#00513a",
+                        "on-background": "#191c1e",
+                        "on-primary-fixed-variant": "#39475f",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "on-secondary-container": "#006e6e",
+                        "surface-tint": "#515f78",
+                        "outline": "#75777e",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container": "#eceef0",
+                        "inverse-on-surface": "#eff1f3",
+                        "inverse-surface": "#2d3133",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#93f2f2",
+                        "on-surface": "#191c1e",
+                        "secondary-container": "#90efef",
+                        "on-secondary-fixed": "#002020"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "stack-md": "12px",
+                        "margin-desktop": "64px",
+                        "stack-lg": "24px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "stack-sm": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "display-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-md": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        .shadow-ambient-1 {
+            box-shadow: 0px 4px 12px rgba(13, 28, 50, 0.04);
+        }
+        .shadow-ambient-2 {
+            box-shadow: 0px 4px 16px rgba(13, 28, 50, 0.08);
+            border: 1px solid rgba(13, 28, 50, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased pt-20">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant shadow-sm h-20 transition-all duration-300">
+<div class="flex justify-between items-center h-full px-margin-desktop max-w-container-max mx-auto">
+<a class="font-headline-sm text-headline-sm font-bold text-primary" href="#">PulseGlobal</a>
+<div class="hidden md:flex space-x-6">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer active:opacity-80" href="#">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Products</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Export Process</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Global Reach</a>
+<a class="font-label-md text-label-md text-secondary border-b-2 border-secondary pb-1 cursor-pointer active:opacity-80" href="#">Quality</a>
+</div>
+<button class="bg-primary-container text-on-primary hover:bg-[#008080] transition-colors duration-200 rounded-DEFAULT px-4 py-2 font-label-md text-label-md">
+                Request a Quote
+            </button>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-margin-desktop py-stack-lg min-h-screen">
+<!-- Hero Section -->
+<section class="mb-stack-lg relative overflow-hidden rounded-lg">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A high-quality, modern, wide-angle photograph of a pristine, high-tech quality control laboratory in an international trade logistics facility. Bright, even, cool-toned lighting emphasizes cleanliness and precision. Technicians in white lab coats are visible in the soft-focus background inspecting electronics. The overall mood is professional, sterile, and authoritative, aligning with a corporate minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD413jYfH-_HxIWNRKT38c6TGYkfa7oHm6elt0fZ576rnl-RzPNYvMyXLe9PRt8njEg92k6_QiRT8uo7_pjFut5_aF06Ii3oVf3RgupeehIg9Mvh0jr6RgEtKutoitBsmnn340nUglQTSOhTOP2I6KLDU1Cffxhxe42TqO9KlnIAKNJV_TjBZA6fqmzKrYwGubAlsfiuuRbPYSVjCDD9H5gz-d60cpwhSGwAsfOsZkoFH0-lpIf_DGZWA"/>
+<div class="absolute inset-0 bg-primary-container/80 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 py-24 px-12 text-center text-on-primary">
+<span class="font-label-sm text-label-sm text-[#C5A059] uppercase tracking-widest mb-stack-sm block">Quality Assurance</span>
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-display-lg-mobile mb-stack-md text-on-primary">Quality You Can Rely On</h1>
+<p class="font-body-lg text-body-lg max-w-2xl mx-auto text-on-primary/90">Rigorous supplier verification, precision product inspection, and exacting packaging standards to ensure global compliance and institutional stability.</p>
+</div>
+</section>
+<!-- Process Flow Diagram -->
+<section class="mb-stack-lg">
+<div class="text-center mb-stack-md">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-sm">The Verification Pathway</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Our seamless, end-to-end quality control workflow ensures that every shipment meets stringent international standards.</p>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-ambient-1 p-12 border border-surface-variant overflow-x-auto">
+<div class="flex items-center justify-between min-w-[800px] relative">
+<!-- Connector Line -->
+<div class="absolute top-1/2 left-0 right-0 h-0.5 bg-surface-variant -z-10 -translate-y-1/2 mx-12"></div>
+<!-- Step 1 -->
+<div class="flex flex-col items-center group relative bg-surface-container-lowest px-4">
+<div class="w-16 h-16 rounded-full bg-primary-container text-on-primary flex items-center justify-center mb-stack-sm shadow-ambient-1 transition-transform group-hover:scale-110 group-hover:shadow-ambient-2 z-10">
+<span class="material-symbols-outlined" data-icon="factory">factory</span>
+</div>
+<span class="font-label-md text-label-md text-primary">Supplier</span>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center group relative bg-surface-container-lowest px-4">
+<div class="w-16 h-16 rounded-full bg-primary-container text-on-primary flex items-center justify-center mb-stack-sm shadow-ambient-1 transition-transform group-hover:scale-110 group-hover:shadow-ambient-2 z-10">
+<span class="material-symbols-outlined" data-icon="policy">policy</span>
+</div>
+<span class="font-label-md text-label-md text-primary">Inspection</span>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center group relative bg-surface-container-lowest px-4">
+<div class="w-16 h-16 rounded-full bg-primary-container text-on-primary flex items-center justify-center mb-stack-sm shadow-ambient-1 transition-transform group-hover:scale-110 group-hover:shadow-ambient-2 z-10">
+<span class="material-symbols-outlined" data-icon="verified">verified</span>
+</div>
+<span class="font-label-md text-label-md text-primary">Approval</span>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center group relative bg-surface-container-lowest px-4">
+<div class="w-16 h-16 rounded-full bg-primary-container text-on-primary flex items-center justify-center mb-stack-sm shadow-ambient-1 transition-transform group-hover:scale-110 group-hover:shadow-ambient-2 z-10">
+<span class="material-symbols-outlined" data-icon="package">package</span>
+</div>
+<span class="font-label-md text-label-md text-primary">Packaging</span>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col items-center group relative bg-surface-container-lowest px-4">
+<div class="w-16 h-16 rounded-full bg-primary-container text-on-primary flex items-center justify-center mb-stack-sm shadow-ambient-1 transition-transform group-hover:scale-110 group-hover:shadow-ambient-2 z-10">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+</div>
+<span class="font-label-md text-label-md text-primary">Documentation</span>
+</div>
+<!-- Step 6 -->
+<div class="flex flex-col items-center group relative bg-surface-container-lowest px-4">
+<div class="w-16 h-16 rounded-full bg-secondary text-on-primary flex items-center justify-center mb-stack-sm shadow-ambient-1 transition-transform group-hover:scale-110 group-hover:shadow-ambient-2 z-10 ring-4 ring-secondary/20">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+</div>
+<span class="font-label-md text-label-md text-secondary">Shipment</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Content Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-stack-lg">
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-ambient-1 hover:shadow-ambient-2 transition-shadow duration-300 border border-transparent hover:border-surface-variant">
+<div class="w-12 h-12 bg-primary-fixed text-primary-container rounded-lg flex items-center justify-center mb-stack-md">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-stack-sm">Supplier Verification</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Comprehensive auditing of manufacturing facilities, financial stability checks, and ethical labor compliance to ensure we partner only with the most reliable entities.</p>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-ambient-1 hover:shadow-ambient-2 transition-shadow duration-300 border border-transparent hover:border-surface-variant">
+<div class="w-12 h-12 bg-primary-fixed text-primary-container rounded-lg flex items-center justify-center mb-stack-md">
+<span class="material-symbols-outlined" data-icon="manage_search">manage_search</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-stack-sm">Product Inspection</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Multi-stage defect analysis, material stress testing, and adherence to international ISO certifications conducted by independent third-party assessors.</p>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-ambient-1 hover:shadow-ambient-2 transition-shadow duration-300 border border-transparent hover:border-surface-variant">
+<div class="w-12 h-12 bg-primary-fixed text-primary-container rounded-lg flex items-center justify-center mb-stack-md">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-stack-sm">Packaging Standards</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Custom-engineered dunnage, climate-controlled containerization protocols, and strict adherence to international phytosanitary regulations for global transit.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 bg-primary-container text-on-primary-container mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="font-headline-sm text-headline-sm text-surface-container-lowest mb-stack-sm block">PulseGlobal</span>
+<p class="font-label-sm text-label-sm text-on-primary-container opacity-80">© 2024 PulseGlobal Trade. All rights reserved.</p>
+</div>
+<div class="col-span-1 md:col-span-3 flex justify-end items-start space-x-12">
+<div class="flex flex-col space-y-2">
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Company</a>
+</div>
+<div class="flex flex-col space-y-2">
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Products</a>
+</div>
+<div class="flex flex-col space-y-2">
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Export</a>
+</div>
+<div class="flex flex-col space-y-2">
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors duration-200 cursor-pointer" href="#">Contact</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
