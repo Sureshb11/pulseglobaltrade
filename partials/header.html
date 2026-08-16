@@ -6,7 +6,7 @@
     <!-- Brand -->
     <a
       href="/index.html"
-      class="flex items-center gap-2.5 min-h-[44px] font-headline-sm text-headline-sm font-bold text-primary shrink-0"
+      class="flex items-center gap-2 sm:gap-2.5 min-h-[44px] font-headline-sm font-bold text-primary shrink-0"
       aria-label="PulseGlobal Trade — home"
     >
       <img
@@ -14,10 +14,16 @@
         alt=""
         width="160"
         height="87"
-        class="h-9 sm:h-10 w-auto"
+        class="h-8 min-[360px]:h-9 sm:h-10 w-auto"
         fetchpriority="high"
       />
-      <span>PulseGlobal</span>
+      <!-- Steps down on narrow screens so the full name still clears the menu
+           button at 320px, the narrowest width we support. The step is at 360px
+           rather than the `xs` token (420px), which would leave every common
+           phone on the smallest size. -->
+      <span class="text-[17px] min-[360px]:text-xl sm:text-headline-sm whitespace-nowrap">
+        PulseGlobal Trade
+      </span>
     </a>
 
     <!-- Desktop navigation -->
