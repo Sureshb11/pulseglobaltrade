@@ -1,98 +1,96 @@
 <footer class="bg-primary-container w-full mt-auto">
   <div class="container-page py-14 md:py-16">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-gutter">
-      <!-- Brand -->
+      <!-- Brand & entity -->
       <div class="flex flex-col gap-stack-md sm:col-span-2 lg:col-span-1">
         <a
           href="/index.html"
           class="font-headline-sm text-headline-sm text-surface-container-lowest flex items-center gap-2 min-h-[44px] self-start"
         >
           <span class="material-symbols-outlined fill text-tertiary-fixed" aria-hidden="true">language</span>
-          PulseGlobal
+          PulseGlobal Trade
         </a>
-        <p class="font-body-md text-body-md text-on-primary-container opacity-80 max-w-sm">
-          Elevating global trade through trusted sourcing, uncompromising quality, and seamless
-          logistics from India to the world.
-        </p>
+        <dl class="flex flex-col gap-stack-sm">
+          <div>
+            <dt class="font-label-sm text-label-sm uppercase tracking-wider text-on-primary-container opacity-60">
+              Legal Entity
+            </dt>
+            <dd class="font-body-md text-body-md text-on-primary-container opacity-90">
+              Sole Proprietorship
+            </dd>
+          </div>
+          <div>
+            <dt class="font-label-sm text-label-sm uppercase tracking-wider text-on-primary-container opacity-60">
+              Founder &amp; Head of Trade
+            </dt>
+            <dd class="font-body-md text-body-md text-on-primary-container opacity-90">
+              Purushothaman Natarajan
+            </dd>
+          </div>
+        </dl>
       </div>
 
-      <!-- Company -->
-      <nav aria-label="Company">
-        <h2 class="footer-heading">Company</h2>
+      <!-- Quick Links -->
+      <nav aria-label="Quick links">
+        <h2 class="footer-heading">Quick Links</h2>
         <ul class="flex flex-col">
           <li><a class="footer-link" href="/about.html" {{active:about}}>About Us</a></li>
-          <li><a class="footer-link" href="/global-reach.html" {{active:global-reach}}>Our Network</a></li>
-          <li><a class="footer-link" href="/quality.html" {{active:quality}}>Quality Standards</a></li>
-          <li><a class="footer-link" href="/export-process.html" {{active:export-process}}>Export Process</a></li>
+          <li><a class="footer-link" href="/products.html" {{active:products}}>Our Products</a></li>
+          <li><a class="footer-link" href="/contact.html" {{active:contact}}>Contact Us</a></li>
         </ul>
       </nav>
 
-      <!-- Products -->
-      <nav aria-label="Products">
-        <h2 class="footer-heading">Products</h2>
-        <ul class="flex flex-col">
-          <li><a class="footer-link" href="/products.html" {{active:products}}>All Categories</a></li>
-          <li><a class="footer-link" href="/product.html">Spices &amp; Condiments</a></li>
-          <li><a class="footer-link" href="/products.html">Food &amp; Agricultural</a></li>
-          <li><a class="footer-link" href="/products.html">Textiles &amp; Garments</a></li>
-        </ul>
-      </nav>
-
-      <!-- Contact -->
+      <!-- Contact Info -->
       <div>
-        <h2 class="footer-heading">Contact</h2>
+        <h2 class="footer-heading">Contact Info</h2>
         <ul class="flex flex-col">
           <li>
-            <a class="footer-link gap-2" href="mailto:trade@pulseglobal.in">
+            <a class="footer-link gap-2" href="mailto:sales@pulseglobaltrade.com">
               <span class="material-symbols-outlined text-[20px]" aria-hidden="true">mail</span>
-              trade@pulseglobal.in
+              sales@pulseglobaltrade.com
             </a>
           </li>
           <li>
-            <a class="footer-link gap-2" href="tel:+919876543210">
+            <a class="footer-link gap-2" href="tel:+918248272430">
               <span class="material-symbols-outlined text-[20px]" aria-hidden="true">call</span>
-              +91 98765 43210
+              +91-8248272430
             </a>
           </li>
           <li>
-            <a class="footer-link gap-2" href="/contact.html" {{active:contact}}>
-              <span class="material-symbols-outlined text-[20px]" aria-hidden="true">location_on</span>
-              Mumbai, India HQ
+            <!-- TODO: replace with the real LinkedIn company page URL -->
+            <a
+              class="footer-link gap-2"
+              href="#"
+              data-needs-url="linkedin"
+              rel="noopener"
+            >
+              <span class="material-symbols-outlined text-[20px]" aria-hidden="true">link</span>
+              LinkedIn
             </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Certifications -->
+      <div>
+        <h2 class="footer-heading">Certifications</h2>
+        <ul class="flex flex-col gap-2">
+          <li class="flex items-center gap-2 font-body-md text-body-md text-on-primary-container opacity-90">
+            <span class="material-symbols-outlined text-[20px] text-tertiary-fixed" aria-hidden="true">verified</span>
+            IEC &amp; GST Registered
           </li>
         </ul>
         <a class="btn-secondary mt-4 w-full sm:w-auto" href="/quote.html">
-          Consult Expert
+          Request a Quote
           <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_right_alt</span>
         </a>
       </div>
     </div>
 
-    <div
-      class="mt-12 pt-8 border-t border-on-primary-container/20 flex flex-col sm:flex-row
-             justify-between items-start sm:items-center gap-4"
-    >
+    <div class="mt-12 pt-8 border-t border-on-primary-container/20">
       <p class="font-body-md text-body-md text-on-primary-container opacity-70">
-        © 2026 PulseGlobal Trade. All rights reserved.
+        © 2026 PulseGlobal Trade (Sole Proprietorship). All Rights Reserved.
       </p>
-      <div class="flex gap-1">
-        <a
-          class="text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors
-                 w-11 h-11 inline-flex items-center justify-center rounded"
-          href="#"
-          aria-label="Share"
-        >
-          <span class="material-symbols-outlined text-[20px]" aria-hidden="true">share</span>
-        </a>
-        <a
-          class="text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors
-                 w-11 h-11 inline-flex items-center justify-center rounded"
-          href="#"
-          aria-label="Website"
-        >
-          <span class="material-symbols-outlined text-[20px]" aria-hidden="true">link</span>
-        </a>
-      </div>
     </div>
   </div>
 </footer>
