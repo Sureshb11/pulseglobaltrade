@@ -118,9 +118,35 @@ here:
 - The Tailwind Play CDN is a development tool and is not used; CSS is compiled at build
   time (~7 kB gzipped).
 
+## Inquiry email
+
+The quote and contact forms POST to `/api/send-inquiry`, a Vercel serverless function
+(the only server-side code here) that emails **sales@pulseglobaltrade.com** via Resend.
+`reply_to` is set to the enquirer, so replying in the mail client goes straight back to
+them.
+
+**It will not send until `RESEND_API_KEY` is set** in Vercel → Settings → Environment
+Variables. See `.env.example`. Until then the function returns 500 and the form shows a
+fallback pointing at the email address, so nothing silently disappears.
+
+`MAIL_FROM` defaults to Resend's shared sending domain, which works with no DNS setup.
+Verify pulseglobaltrade.com in Resend and switch it to an address on the domain for
+better deliverability.
+
+Notes on the implementation:
+
+- Only known field names are read off the request, so a crafted payload cannot stuff
+  arbitrary content into the email; values are HTML-escaped.
+- A hidden honeypot field (`company_website`) returns 200 without sending, so bots see
+  success and do not retry with variations.
+- Provider errors are logged server-side and never reflected to the client — an invalid
+  key must not echo back to the browser.
+- On failure the form keeps what the user typed, and only resets on success.
+
+The products filter bar is `data-local-form` — presentational, client-side only.
+
 ## Not wired up
 
-The quote and contact forms validate and acknowledge inline but do not submit anywhere —
-see `initForms` in `src/main.js` and point them at your CRM or mail service. The products
-filter bar is presentational for the same reason. Product imagery still points at the
-Google-hosted URLs from the export; move these to your own asset host before launch.
+The footer LinkedIn link is `href="#"` pending the real company page URL. Product imagery
+still points at the Google-hosted URLs from the Stitch export; move these to your own
+asset host before launch.

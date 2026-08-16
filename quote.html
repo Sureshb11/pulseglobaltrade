@@ -32,7 +32,13 @@
           <!-- Form -->
           <div class="lg:col-span-8">
             <div class="card p-5 sm:p-6 md:p-8">
-              <form class="flex flex-col gap-10" data-demo-form novalidate>
+              <form class="flex flex-col gap-10" data-inquiry-form="quote" novalidate>
+                <!-- Honeypot: hidden from people, irresistible to bots. -->
+                <div class="hidden" aria-hidden="true">
+                  <label for="q-company-website">Company website</label>
+                  <input id="q-company-website" name="company_website" type="text" tabindex="-1" autocomplete="off" />
+                </div>
+
                 <!-- 1. Company & contact -->
                 <fieldset class="flex flex-col gap-stack-md">
                   <legend class="w-full font-title-lg text-title-lg text-primary border-b border-outline-variant pb-stack-sm mb-stack-md">
@@ -134,15 +140,12 @@
                 </fieldset>
 
                 <p
-                  class="font-body-md text-body-md text-secondary bg-secondary-container/40 rounded px-4 py-3"
+                  class="font-body-md text-body-md rounded px-4 py-3"
                   data-form-status
                   role="status"
+                  aria-live="polite"
                   hidden
-                >
-                  Thank you — your request has been captured. A trade specialist will respond within
-                  24 hours. (This demo does not send data anywhere; wire the form to your CRM or
-                  mail service to go live.)
-                </p>
+                ></p>
 
                 <div class="flex justify-stretch sm:justify-end">
                   <button class="btn-primary w-full sm:w-auto px-8" type="submit">

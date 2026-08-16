@@ -4,3 +4,8 @@ dist
 
 # Source design export — the extracted folder is tracked instead
 stitch_pulseglobal_export_hub.zip
+
+# Local env — real keys never get committed
+.env
+.env.local
+.vercel

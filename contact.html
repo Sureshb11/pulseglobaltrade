@@ -133,7 +133,13 @@
                 Provide your logistics requirements, and our specialists will respond within 24 hours.
               </p>
 
-              <form class="flex flex-col gap-5 relative z-10" data-demo-form novalidate>
+              <form class="flex flex-col gap-5 relative z-10" data-inquiry-form="contact" novalidate>
+                <!-- Honeypot: hidden from people, irresistible to bots. -->
+                <div class="hidden" aria-hidden="true">
+                  <label for="c-company-website">Company website</label>
+                  <input id="c-company-website" name="company_website" type="text" tabindex="-1" autocomplete="off" />
+                </div>
+
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label class="field-label" for="first_name">First Name</label>
@@ -185,14 +191,12 @@
                 </div>
 
                 <p
-                  class="font-body-md text-body-md text-secondary bg-secondary-container/40 rounded px-4 py-3"
+                  class="font-body-md text-body-md rounded px-4 py-3"
                   data-form-status
                   role="status"
+                  aria-live="polite"
                   hidden
-                >
-                  Thanks — we've got your inquiry and will reply within 24 hours. (This demo does not
-                  send data anywhere; connect the form to your mail service to go live.)
-                </p>
+                ></p>
 
                 <button class="btn-primary w-full group" type="submit">
                   Submit Inquiry
