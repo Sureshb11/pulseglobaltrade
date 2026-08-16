@@ -7,14 +7,14 @@
  * Configuration (Vercel → Settings → Environment Variables):
  *   RESEND_API_KEY  required — https://resend.com/api-keys
  *   MAIL_TO         optional — defaults to sales@pulseglobaltrade.com
- *   MAIL_FROM       optional — defaults to Resend's shared sending domain,
- *                   which works without DNS setup. Switch to an address on a
- *                   verified pulseglobaltrade.com once the domain is added in
- *                   Resend, so replies and deliverability come from the brand.
+ *   MAIL_FROM       optional — defaults to the verified pulseglobaltrade.com
+ *                   sender. Resend's shared onboarding@resend.dev sender cannot
+ *                   be used here: it only delivers to the Resend account owner's
+ *                   own address, so mail to sales@ came back 403.
  */
 
 const MAIL_TO = process.env.MAIL_TO || 'sales@pulseglobaltrade.com';
-const MAIL_FROM = process.env.MAIL_FROM || 'PulseGlobal Trade <onboarding@resend.dev>';
+const MAIL_FROM = process.env.MAIL_FROM || 'PulseGlobal Trade <sales@pulseglobaltrade.com>';
 
 /* Only these keys are ever read off the request, so a crafted payload cannot
    stuff arbitrary content into the email. */
