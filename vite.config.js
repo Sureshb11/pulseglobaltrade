@@ -5,6 +5,8 @@ import { fileURLToPath } from 'node:url';
 
 const root = dirname(fileURLToPath(import.meta.url));
 
+const SITE_ORIGIN = 'https://www.pulseglobaltrade.com';
+
 /**
  * Inlines `<!-- @include partials/name.html -->` at transform time so the header,
  * footer and <head> block live in exactly one file. Runs in dev and in build, so
@@ -28,10 +30,14 @@ function htmlPartials() {
     enforce: 'pre',
     transformIndexHtml: {
       order: 'pre',
-      handler(html) {
+      handler(html, ctx) {
         const page = html.match(/data-page="([\w-]+)"/)?.[1] ?? '';
         const title = html.match(/data-title="([^"]*)"/)?.[1] ?? 'PulseGlobal Trade';
         const description = html.match(/data-description="([^"]*)"/)?.[1] ?? '';
+
+        // www is the canonical host: the apex 308-redirects to it in Vercel.
+        const path = (ctx?.path ?? '/').replace(/^\/?/, '/');
+        const canonical = SITE_ORIGIN + (path === '/index.html' ? '/' : path);
         return expand(html)
           // `{{active:products}}` becomes aria-current="page" on the matching
           // page and nothing elsewhere, so the active nav state is real markup
@@ -41,7 +47,8 @@ function htmlPartials() {
           )
           .replaceAll('{{page}}', page)
           .replaceAll('{{title}}', title)
-          .replaceAll('{{description}}', description);
+          .replaceAll('{{description}}', description)
+          .replaceAll('{{canonical}}', canonical);
       },
     },
     // Editing a partial should reload the pages that include it.

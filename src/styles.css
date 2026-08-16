@@ -188,8 +188,8 @@
   /* ---------- Navigation ---------- */
 
   .nav-link {
-    @apply relative flex items-center font-label-md text-label-md text-on-surface-variant
-      hover:text-secondary transition-colors duration-200 cursor-pointer;
+    @apply relative flex items-center whitespace-nowrap font-label-md text-label-md
+      text-on-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer;
   }
 
   .nav-link[aria-current='page'] {

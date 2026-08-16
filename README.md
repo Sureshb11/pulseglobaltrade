@@ -49,14 +49,41 @@ Each page declares its identity on the `<html>` element:
 expands to `aria-current="page"` on the matching page and to nothing elsewhere. Adding a
 page means creating `<name>.html` at the root — Vite picks it up automatically.
 
+## Brand assets
+
+`pulse-logo.png` in the repo root is the master artwork. It is not served — it
+is 1536×1024, ~1 MB, and has an **opaque white background**, so dropping it
+straight onto the navy footer would show a white rectangle.
+
+```bash
+npm run assets
+```
+
+`scripts/generate-logo-assets.mjs` keys out the white background (ramping the
+anti-aliased edge so the result is not jagged), locates the PG monogram by
+detecting blank rows between the lockup's bands rather than hardcoded offsets,
+and box-filters each downscale. It writes to `public/`:
+
+| File | Used for |
+| --- | --- |
+| `logo-mark.png` | header — the stacked lockup is 3:2, so at 80px header height the wordmark and tagline would be a few pixels tall |
+| `logo-full.png` | full lockup, transparent, for light backgrounds |
+| `logo-full-light.png` | white knockout for the navy footer |
+| `favicon-32.png`, `favicon-180.png` | browser tab and iOS home screen (flattened onto white — transparency renders black there) |
+| `og-image.png` | 1200×630 social preview, knockout lockup on brand navy |
+
+Outputs are committed, so this only needs re-running when the master changes.
+
 ## Responsive behaviour
 
 Breakpoints are Tailwind defaults plus `xs: 420px`. Verified with no horizontal overflow
 at 320 / 640 / 768 / 1024 px on every page.
 
-- **Navigation** collapses to a slide-in drawer below `lg` (the seven-item nav needs the
-  room). The drawer traps focus, closes on Escape, overlay click, or resize past `lg`, and
-  locks page scroll without losing position.
+- **Navigation** collapses to a slide-in drawer below `xl` — with the logo mark in the
+  brand lockup, seven nav links plus the CTA start wrapping at `lg`. The drawer traps
+  focus, closes on Escape, overlay click, or resize past `xl`, and locks page scroll
+  without losing position. The breakpoint is duplicated in `src/main.js` (`min-width:
+  1280px`) and must stay in step with the `xl:hidden` classes in `partials/header.html`.
 - **Page gutters** use the `.container-page` helper: 20px on mobile, 64px from `md`. The
   export applied the 64px desktop margin unconditionally, which consumed a third of a
   375px screen.

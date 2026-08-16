@@ -86,9 +86,10 @@ function initMobileMenu() {
     }
   });
 
-  // Resizing past the lg breakpoint reveals the desktop nav; a drawer left
-  // open would keep the body scroll-locked.
-  const desktop = window.matchMedia('(min-width: 1024px)');
+  // Resizing past the xl breakpoint reveals the desktop nav; a drawer left
+  // open would keep the body scroll-locked. Must match the `xl:hidden` in
+  // partials/header.html.
+  const desktop = window.matchMedia('(min-width: 1280px)');
   desktop.addEventListener('change', (e) => e.matches && hide());
 }
 

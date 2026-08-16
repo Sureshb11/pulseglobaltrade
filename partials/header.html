@@ -6,14 +6,22 @@
     <!-- Brand -->
     <a
       href="/index.html"
-      class="flex items-center gap-2 min-h-[44px] font-headline-sm text-headline-sm font-bold text-primary shrink-0"
+      class="flex items-center gap-2.5 min-h-[44px] font-headline-sm text-headline-sm font-bold text-primary shrink-0"
+      aria-label="PulseGlobal Trade — home"
     >
-      <span class="material-symbols-outlined fill text-secondary" aria-hidden="true">language</span>
+      <img
+        src="/logo-mark.png"
+        alt=""
+        width="160"
+        height="87"
+        class="h-9 sm:h-10 w-auto"
+        fetchpriority="high"
+      />
       <span>PulseGlobal</span>
     </a>
 
     <!-- Desktop navigation -->
-    <nav class="hidden lg:flex items-center gap-7" aria-label="Main">
+    <nav class="hidden xl:flex items-center gap-7" aria-label="Main">
       <a class="nav-link" href="/index.html" {{active:home}}>Home</a>
       <a class="nav-link" href="/about.html" {{active:about}}>About</a>
       <a class="nav-link" href="/products.html" {{active:products}}>Products</a>
@@ -24,7 +32,7 @@
     </nav>
 
     <!-- Desktop actions -->
-    <div class="hidden lg:flex items-center gap-3 shrink-0">
+    <div class="hidden xl:flex items-center gap-3 shrink-0">
       <a class="btn-primary px-5" href="/quote.html">Request a Quote</a>
     </div>
 
@@ -32,7 +40,7 @@
     <button
       type="button"
       id="menu-toggle"
-      class="lg:hidden inline-flex items-center justify-center w-11 h-11 -mr-2 rounded text-primary hover:bg-surface-container-low transition-colors"
+      class="xl:hidden inline-flex items-center justify-center w-11 h-11 -mr-2 rounded text-primary hover:bg-surface-container-low transition-colors"
       aria-label="Open menu"
       aria-expanded="false"
       aria-controls="mobile-menu"
@@ -45,13 +53,13 @@
 <!-- Mobile drawer -->
 <div
   id="menu-overlay"
-  class="lg:hidden fixed inset-0 z-40 bg-primary-container/50 opacity-0 pointer-events-none transition-opacity duration-300"
+  class="xl:hidden fixed inset-0 z-40 bg-primary-container/50 opacity-0 pointer-events-none transition-opacity duration-300"
   hidden
 ></div>
 
 <aside
   id="mobile-menu"
-  class="lg:hidden fixed top-0 right-0 z-50 h-[100dvh] w-[86%] max-w-sm
+  class="xl:hidden fixed top-0 right-0 z-50 h-[100dvh] w-[86%] max-w-sm
          bg-surface-container-lowest shadow-ambient-2 flex flex-col
          translate-x-full transition-transform duration-300 ease-out"
   role="dialog"
