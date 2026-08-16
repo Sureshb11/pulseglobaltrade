@@ -126,16 +126,28 @@ export default async function handler(req, res) {
     });
 
     if (!response.ok) {
-      // Log the provider's reason server-side; never reflect it to the client.
-      // Resend's message can quote the account owner's personal address, which
-      // must not appear on a public endpoint — only the numeric status goes back,
-      // which is enough to tell a bad key (401) from the shared-sender recipient
-      // restriction (403) without disclosing anything.
-      console.error('Resend rejected the message', response.status, await response.text());
+      const detail = await response.text();
+      // Log the provider's reason in full server-side, but never reflect it to
+      // the client: Resend's message can quote the account owner's personal
+      // address, which must not appear on a public endpoint. Classify it into a
+      // fixed enum instead — enough to act on, impossible to leak through.
+      console.error('Resend rejected the message', response.status, detail);
+
+      let reasonCode = 'unknown';
+      if (response.status === 401) reasonCode = 'invalid_api_key';
+      else if (/not verified|verify a domain|domain.*not found/i.test(detail))
+        reasonCode = 'sending_domain_not_verified';
+      else if (/testing emails|own email address/i.test(detail))
+        reasonCode = 'shared_sender_recipient_restricted';
+      else if (/from/i.test(detail) && /invalid|not allowed/i.test(detail))
+        reasonCode = 'invalid_from_address';
+      else if (response.status === 429) reasonCode = 'rate_limited';
+
       return res.status(502).json({
         ok: false,
         error: 'We could not send that just now. Please email us directly.',
         providerStatus: response.status,
+        reasonCode,
       });
     }
   } catch (err) {
