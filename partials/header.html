@@ -1,6 +1,6 @@
 <header
   id="site-header"
-  class="fixed top-0 inset-x-0 z-50 h-20 bg-surface-container-lowest border-b border-outline-variant shadow-sm transition-shadow duration-300"
+  class="fixed top-0 inset-x-0 z-50 h-20 bg-surface-container-lowest/85 backdrop-blur-md border-b border-outline-variant shadow-sm transition-all duration-300"
 >
   <div class="container-page h-full flex items-center justify-between gap-4">
     <!-- Brand -->
@@ -26,20 +26,18 @@
       </span>
     </a>
 
-    <!-- Desktop navigation -->
-    <nav class="hidden xl:flex items-center gap-7" aria-label="Main">
-      <a class="nav-link" href="/index.html" {{active:home}}>Home</a>
-      <a class="nav-link" href="/about.html" {{active:about}}>About</a>
-      <a class="nav-link" href="/products.html" {{active:products}}>Products</a>
-      <a class="nav-link" href="/export-process.html" {{active:export-process}}>Export Process</a>
-      <a class="nav-link" href="/global-reach.html" {{active:global-reach}}>Global Reach</a>
-      <a class="nav-link" href="/quality.html" {{active:quality}}>Quality</a>
-      <a class="nav-link" href="/contact.html" {{active:contact}}>Contact</a>
-    </nav>
-
-    <!-- Desktop actions -->
-    <div class="hidden xl:flex items-center gap-3 shrink-0">
-      <a class="btn-primary px-5" href="/quote.html">Request a Quote</a>
+    <!-- Desktop navigation & actions -->
+    <div class="hidden xl:flex items-center gap-8" aria-label="Main">
+      <nav class="flex items-center gap-7">
+        <a class="nav-link" href="/index.html" {{active:home}}>Home</a>
+        <a class="nav-link" href="/about.html" {{active:about}}>About</a>
+        <a class="nav-link" href="/products.html" {{active:products}}>Products</a>
+        <a class="nav-link" href="/export-process.html" {{active:export-process}}>Export Process</a>
+        <a class="nav-link" href="/global-reach.html" {{active:global-reach}}>Global Reach</a>
+        <a class="nav-link" href="/quality.html" {{active:quality}}>Quality</a>
+        <a class="nav-link" href="/contact.html" {{active:contact}}>Contact</a>
+      </nav>
+      <a class="btn-primary px-5 shrink-0" href="/quote.html">Request a Quote</a>
     </div>
 
     <!-- Mobile / tablet menu trigger -->
@@ -121,3 +119,18 @@
     </a>
   </div>
 </aside>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const header = document.getElementById('site-header');
+    if (window.scrollY > 20) {
+      header.classList.replace('h-20', 'h-16');
+      header.classList.add('shadow-md');
+      header.classList.remove('shadow-sm');
+    } else {
+      header.classList.replace('h-16', 'h-20');
+      header.classList.remove('shadow-md');
+      header.classList.add('shadow-sm');
+    }
+  });
+</script>

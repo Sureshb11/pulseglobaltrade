@@ -1,5 +1,6 @@
 import './styles.css';
 import { initHeroShader } from './hero-shader.js';
+import { initProductPage } from './product-loader.js';
 
 /* ------------------------------------------------------------------ *
  * Mobile drawer
@@ -246,6 +247,7 @@ function initForms() {
 /* ------------------------------------------------------------------ */
 
 function init() {
+  initProductPage();
   initMobileMenu();
   initHeaderScroll();
   initGallery();

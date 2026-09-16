@@ -83,11 +83,23 @@
   .btn {
     @apply inline-flex items-center justify-center gap-2 min-h-[44px] px-6 py-3
       rounded font-label-md text-label-md text-center
-      transition-colors duration-200 cursor-pointer select-none;
+      transition-all duration-300 cursor-pointer select-none
+      hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:scale-95 active:shadow-sm;
+  }
+
+  .btn .material-symbols-outlined {
+    @apply transition-transform duration-300;
+  }
+
+  .btn:hover .material-symbols-outlined {
+    @apply translate-x-1;
   }
 
   .btn-primary {
-    @apply btn bg-primary-container text-on-primary hover:bg-teal active:opacity-90;
+    @apply btn bg-gradient-to-br from-primary-container to-teal text-on-primary 
+      shadow-[inset_0_1px_0_rgba(255,255,255,0.15)] 
+      hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_0_15px_rgba(0,128,128,0.5)] 
+      active:opacity-90;
   }
 
   .btn-secondary {
@@ -109,7 +121,10 @@
   }
 
   .btn-gold {
-    @apply btn bg-gold text-primary-container hover:bg-gold-light font-semibold;
+    @apply btn bg-gradient-to-br from-gold to-[#d4af37] text-primary-container font-semibold
+      shadow-[inset_0_1px_0_rgba(255,255,255,0.3)]
+      hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.4),0_0_15px_rgba(212,175,55,0.5)]
+      active:opacity-90;
   }
 
   /* ---------- Cards ---------- */
@@ -192,13 +207,19 @@
       text-on-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer;
   }
 
-  .nav-link[aria-current='page'] {
-    @apply text-secondary;
+  .nav-link::after {
+    content: '';
+    @apply absolute left-0 right-0 -bottom-1 h-0.5 bg-secondary rounded-full transition-transform duration-300 origin-center;
+    transform: scaleX(0);
   }
 
+  .nav-link:hover::after,
   .nav-link[aria-current='page']::after {
-    content: '';
-    @apply absolute left-0 right-0 -bottom-1 h-0.5 bg-secondary rounded-full;
+    transform: scaleX(1);
+  }
+
+  .nav-link[aria-current='page'] {
+    @apply text-secondary;
   }
 
   .nav-link-mobile {

@@ -47,6 +47,7 @@
                 <option>Spices &amp; Seasonings</option>
                 <option>Textiles &amp; Apparel</option>
                 <option>Industrial Materials</option>
+                <option>Covering Jewellery</option>
               </select>
               <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
             </div>
@@ -101,9 +102,9 @@
       <!-- Product grid -->
       <section class="container-page mt-10 md:mt-12">
         <h2 class="sr-only">Product categories</h2>
-        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
           <li class="group card card-hover overflow-hidden flex flex-col">
-            <a href="/product.html" class="flex flex-col h-full">
+            <a href="/product.html?id=spices" class="flex flex-col h-full">
               <div class="relative h-56 sm:h-64 overflow-hidden bg-surface-container image-zoom-container rounded-none">
                 <div
                   class="absolute inset-0 bg-cover bg-center image-zoom"
@@ -140,7 +141,7 @@
           </li>
 
           <li class="group card card-hover overflow-hidden flex flex-col">
-            <a href="/product.html" class="flex flex-col h-full">
+            <a href="/product.html?id=textiles" class="flex flex-col h-full">
               <div class="relative h-56 sm:h-64 overflow-hidden bg-surface-container image-zoom-container rounded-none">
                 <div
                   class="absolute inset-0 bg-cover bg-center image-zoom"
@@ -176,8 +177,8 @@
             </a>
           </li>
 
-          <li class="group card card-hover overflow-hidden flex flex-col sm:col-span-2 lg:col-span-1">
-            <a href="/product.html" class="flex flex-col h-full">
+          <li class="group card card-hover overflow-hidden flex flex-col">
+            <a href="/product.html?id=agri" class="flex flex-col h-full">
               <div class="relative h-56 sm:h-64 overflow-hidden bg-surface-container image-zoom-container rounded-none">
                 <div
                   class="absolute inset-0 bg-cover bg-center image-zoom"
@@ -198,6 +199,40 @@
                 </p>
                 <div class="flex items-center justify-between gap-3 mt-auto pt-2 border-t border-outline-variant/30">
                   <span class="font-label-sm text-label-sm text-on-surface-variant">MOQ: 5 Tons</span>
+                  <span class="text-gold font-label-md text-label-md flex items-center gap-1">
+                    View Products
+                    <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="group card card-hover overflow-hidden flex flex-col">
+            <a href="/product.html?id=jewellery" class="flex flex-col h-full">
+              <div class="relative h-56 sm:h-64 overflow-hidden bg-surface-container image-zoom-container rounded-none">
+                <div
+                  class="absolute inset-0 bg-cover bg-center image-zoom"
+                  style="background-image: url('/images/covering_jewellery.jpg');"
+                  role="img"
+                  aria-label="Premium traditional Indian covering jewellery."
+                ></div>
+                <span
+                  class="absolute top-4 left-4 bg-secondary text-white font-label-sm text-label-sm
+                         px-3 py-1 rounded-full uppercase tracking-wider shadow-sm"
+                >
+                  Premium Crafted
+                </span>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3 class="font-title-lg text-title-lg text-primary mb-stack-sm">
+                  Covering Jewellery
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-stack-md">
+                  High-quality traditional Indian imitation and gold-plated jewellery. Elegantly crafted for the global commercial market and fashion supply chains.
+                </p>
+                <div class="flex items-center justify-between gap-3 mt-auto pt-2 border-t border-outline-variant/30">
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">MOQ: Negotiable</span>
                   <span class="text-gold font-label-md text-label-md flex items-center gap-1">
                     View Products
                     <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span>

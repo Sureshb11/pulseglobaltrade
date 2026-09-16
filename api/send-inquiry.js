@@ -20,18 +20,16 @@ const MAIL_FROM = process.env.MAIL_FROM || 'PulseGlobal Trade <sales@pulseglobal
    stuff arbitrary content into the email. */
 const FIELDS = {
   quote: [
-    ['firstName', 'First name'],
-    ['lastName', 'Last name'],
-    ['companyName', 'Company'],
+    ['fullName', 'Full name'],
+    ['businessName', 'Business name'],
     ['email', 'Business email'],
+    ['countryCode', 'Country Code'],
     ['phone', 'Phone'],
-    ['commodity', 'Commodity / product'],
-    ['origin', 'Origin'],
-    ['destination', 'Destination'],
-    ['weight', 'Est. weight (kg)'],
-    ['volume', 'Est. volume (cbm)'],
+    ['product', 'Product & Instructions'],
+    ['destinationCountry', 'Destination Country'],
+    ['weightOrQuantity', 'Est. Weight or Quantity'],
+    ['unit', 'Unit'],
     ['containerType', 'Container type'],
-    ['notes', 'Special handling'],
   ],
   contact: [
     ['first_name', 'First name'],
@@ -42,7 +40,7 @@ const FIELDS = {
   ],
 };
 
-const REQUIRED = { quote: ['email', 'commodity'], contact: ['email'] };
+const REQUIRED = { quote: ['fullName', 'phone'], contact: ['email'] };
 const SUBJECT = { quote: 'New quote request', contact: 'New website inquiry' };
 
 const escapeHtml = (value) =>
@@ -103,7 +101,7 @@ export default async function handler(req, res) {
     </p>`;
 
   const text = rows.map(([label, value]) => `${label}: ${value}`).join('\n');
-  const who = [body.firstName || body.first_name, body.lastName || body.last_name]
+  const who = [body.fullName || body.firstName || body.first_name, body.lastName || body.last_name]
     .filter(Boolean)
     .join(' ');
 

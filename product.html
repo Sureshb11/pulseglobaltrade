@@ -20,7 +20,7 @@
             <li aria-hidden="true"><span class="material-symbols-outlined text-[16px]">chevron_right</span></li>
             <li><a class="hover:text-secondary transition-colors" href="/products.html">Products</a></li>
             <li aria-hidden="true"><span class="material-symbols-outlined text-[16px]">chevron_right</span></li>
-            <li class="text-gold font-semibold" aria-current="page">Premium Grade Spices</li>
+            <li id="dyn-breadcrumb" class="text-gold font-semibold" aria-current="page">Premium Grade Spices</li>
           </ol>
         </nav>
 
@@ -88,13 +88,14 @@
           <div class="lg:col-span-5">
             <div class="card p-6 md:p-8 h-full flex flex-col">
               <span
+                id="dyn-badge"
                 class="self-start inline-block px-3 py-1 rounded-full bg-gold/10 text-gold
                        font-label-sm text-label-sm mb-3"
               >
                 Premium Shipment
               </span>
-              <h1 class="h-headline text-primary mb-stack-md">Premium Grade Spices Collection</h1>
-              <p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">
+              <h1 id="dyn-title" class="h-headline text-primary mb-stack-md">Premium Grade Spices Collection</h1>
+              <p id="dyn-desc" class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">
                 Sourced directly from the finest estates in India, our premium grade spice collection
                 meets the highest international quality standards. Ideal for bulk processing and
                 private label retail.
@@ -105,21 +106,21 @@
                   <dt class="font-label-sm text-label-sm text-on-surface-variant mb-1">Origin</dt>
                   <dd class="font-body-md text-body-md text-primary font-medium flex items-center gap-2">
                     <span class="material-symbols-outlined text-[18px]" aria-hidden="true">location_on</span>
-                    India
+                    <span id="dyn-origin">India</span>
                   </dd>
                 </div>
                 <div class="border border-outline-variant/30 rounded p-3 bg-surface">
                   <dt class="font-label-sm text-label-sm text-on-surface-variant mb-1">MOQ</dt>
                   <dd class="font-body-md text-body-md text-primary font-medium flex items-center gap-2">
                     <span class="material-symbols-outlined text-[18px]" aria-hidden="true">scale</span>
-                    500 KG
+                    <span id="dyn-moq">500 KG</span>
                   </dd>
                 </div>
                 <div class="border border-outline-variant/30 rounded p-3 bg-surface">
                   <dt class="font-label-sm text-label-sm text-on-surface-variant mb-1">Packaging</dt>
                   <dd class="font-body-md text-body-md text-primary font-medium flex items-center gap-2">
                     <span class="material-symbols-outlined text-[18px]" aria-hidden="true">inventory_2</span>
-                    Bulk Sacks / Custom
+                    <span id="dyn-packaging">Bulk Sacks / Custom</span>
                   </dd>
                 </div>
                 <div class="border border-outline-variant/30 rounded p-3 bg-surface">
@@ -128,7 +129,7 @@
                     <span class="material-symbols-outlined text-[18px] text-on-tertiary-container" aria-hidden="true">
                       check_circle
                     </span>
-                    Available
+                    <span id="dyn-private">Available</span>
                   </dd>
                 </div>
               </dl>
@@ -154,7 +155,7 @@
               <span class="material-symbols-outlined text-secondary" aria-hidden="true">verified</span>
               <h2 class="font-title-lg text-title-lg text-primary">Quality Standards</h2>
             </div>
-            <ul class="space-y-2">
+            <ul id="dyn-quality" class="space-y-2">
               <li class="flex items-start gap-2 font-body-md text-body-md text-on-surface-variant">
                 <span class="material-symbols-outlined text-[18px] text-outline mt-1" aria-hidden="true">check</span>
                 ISO 9001:2015 certified processing
@@ -179,7 +180,7 @@
               Ready for immediate dispatch from major Indian ports. We handle all complex export
               documentation.
             </p>
-            <ul class="flex gap-2 flex-wrap">
+            <ul id="dyn-export" class="flex gap-2 flex-wrap">
               <li class="px-3 py-1 bg-surface rounded-full font-label-sm text-label-sm text-on-surface-variant border border-outline-variant/30">FOB</li>
               <li class="px-3 py-1 bg-surface rounded-full font-label-sm text-label-sm text-on-surface-variant border border-outline-variant/30">CIF</li>
               <li class="px-3 py-1 bg-surface rounded-full font-label-sm text-label-sm text-on-surface-variant border border-outline-variant/30">Air Freight</li>

@@ -11,9 +11,13 @@
   <body>
     <!-- @include partials/header.html -->
 
-    <main class="pt-20">
-      <div class="container-page py-10 md:py-14">
-        <div class="mb-10 md:mb-12">
+    <main class="pt-20 relative overflow-x-hidden bg-surface-container-lowest/50">
+      <!-- Decorative background glows -->
+      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[100px] pointer-events-none z-[-1] mix-blend-multiply"></div>
+      <div class="absolute bottom-10 left-10 w-[600px] h-[600px] bg-gold/10 rounded-full blur-[100px] pointer-events-none z-[-1] mix-blend-multiply"></div>
+
+      <div class="container-page pb-6 md:pb-8 pt-2 md:pt-4 relative z-10">
+        <div class="mb-6 md:mb-8">
           <nav aria-label="Breadcrumb" class="mb-stack-md">
             <ol class="flex items-center gap-2 font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">
               <li><a class="hover:text-secondary transition-colors" href="/index.html">Home</a></li>
@@ -23,90 +27,274 @@
           </nav>
           <h1 class="h-display text-primary mb-stack-sm">Request a Quote</h1>
           <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
-            Provide details about your logistics requirements, and our global trade specialists will
-            construct a tailored proposal within 24 hours.
+            Looking for the right product at the right price? Send us your requirements and receive a customized export quotation.
           </p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-gutter">
           <!-- Form -->
           <div class="lg:col-span-8">
-            <div class="card p-5 sm:p-6 md:p-8">
-              <form class="flex flex-col gap-10" data-inquiry-form="quote" novalidate>
+            <div class="card p-4 sm:p-5 md:p-6 bg-white/60 backdrop-blur-xl border border-white/50 shadow-xl transition-all duration-500 hover:shadow-2xl hover:bg-white/70">
+              <form class="flex flex-col gap-4" data-inquiry-form="quote" novalidate>
                 <!-- Honeypot: hidden from people, irresistible to bots. -->
                 <div class="hidden" aria-hidden="true">
                   <label for="q-company-website">Company website</label>
                   <input id="q-company-website" name="company_website" type="text" tabindex="-1" autocomplete="off" />
                 </div>
 
-                <!-- 1. Company & contact -->
-                <fieldset class="flex flex-col gap-stack-md">
-                  <legend class="w-full font-title-lg text-title-lg text-primary border-b border-outline-variant pb-stack-sm mb-stack-md">
-                    1. Company &amp; Contact Details
-                  </legend>
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div>
-                      <label class="field-label" for="firstName">First Name</label>
-                      <input class="field" id="firstName" name="firstName" type="text" autocomplete="given-name" required />
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div class="md:col-span-1">
+                        <label class="field-label" for="fullName">Full Name <span class="text-red-500">*</span></label>
+                        <input class="field" id="fullName" name="fullName" type="text" autocomplete="name" oninput="this.value = this.value.replace(/[^a-zA-Z\s\.\-']/g, '')" required />
+                      </div>
+                    <div class="md:col-span-1">
+                      <label class="field-label" for="businessName">Business Name <span class="text-sm font-normal text-on-surface-variant opacity-70">(Optional)</span></label>
+                      <input class="field" id="businessName" name="businessName" type="text" autocomplete="organization" />
                     </div>
                     <div>
-                      <label class="field-label" for="lastName">Last Name</label>
-                      <input class="field" id="lastName" name="lastName" type="text" autocomplete="family-name" required />
-                    </div>
-                    <div class="md:col-span-2">
-                      <label class="field-label" for="companyName">Company Name</label>
-                      <input class="field" id="companyName" name="companyName" type="text" autocomplete="organization" required />
+                      <label class="field-label" for="phone">Phone Number <span class="text-red-500">*</span></label>
+                      <div class="flex bg-white/50 focus-within:bg-white rounded border border-outline-variant focus-within:border-secondary focus-within:ring-2 focus-within:ring-secondary/20 transition-all duration-200">
+                        <div class="relative w-[110px] shrink-0 border-r border-outline-variant">
+                          <select class="w-full h-full appearance-none bg-transparent pl-3 pr-8 font-medium focus:outline-none cursor-pointer text-body-md" id="countryCode" name="countryCode">
+                            <option value="+91">🇮🇳 +91</option>
+                            <option value="+1">🇺🇸 +1</option>
+                            <option value="+44">🇬🇧 +44</option>
+                            <option value="+61">🇦🇺 +61</option>
+                            <option value="+971">🇦🇪 +971</option>
+                            <option value="+65">🇸🇬 +65</option>
+                            <option value="+49">🇩🇪 +49</option>
+                            <option value="+81">🇯🇵 +81</option>
+                          </select>
+                          <span class="material-symbols-outlined absolute right-1.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[20px]" aria-hidden="true">expand_more</span>
+                        </div>
+                        <input class="flex-1 bg-transparent px-4 py-3 text-body-md focus:outline-none min-h-[44px]" id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" oninput="this.value = this.value.replace(/[^0-9\+\-\s]/g, '')" placeholder="Mobile Number" required />
+                      </div>
                     </div>
                     <div>
-                      <label class="field-label" for="email">Business Email</label>
-                      <input class="field" id="email" name="email" type="email" autocomplete="email" inputmode="email" required />
-                    </div>
-                    <div>
-                      <label class="field-label" for="phone">Phone Number</label>
-                      <input class="field" id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" />
+                      <label class="field-label" for="email">Business Email <span class="text-sm font-normal text-on-surface-variant opacity-70">(Optional)</span></label>
+                      <input class="field" id="email" name="email" type="email" autocomplete="email" inputmode="email" />
                     </div>
                   </div>
-                </fieldset>
 
-                <!-- 2. Shipment -->
-                <fieldset class="flex flex-col gap-stack-md">
-                  <legend class="w-full font-title-lg text-title-lg text-primary border-b border-outline-variant pb-stack-sm mb-stack-md">
-                    2. Shipment Details
-                  </legend>
-                  <div class="flex flex-col gap-5">
+                  <div class="flex flex-col gap-4">
                     <div>
-                      <label class="field-label" for="commodity">Commodity / Product Description</label>
-                      <input
-                        class="field"
-                        id="commodity"
-                        name="commodity"
-                        type="text"
-                        placeholder="e.g. Turmeric powder, raw cotton, machined components"
-                        required
-                      />
+                      <label class="field-label" for="product">Product Description & Special Instructions <span class="text-sm font-normal text-on-surface-variant opacity-70">(Optional)</span></label>
+                      <textarea
+                        class="field !min-h-[80px]"
+                        id="product"
+                        name="product"
+                        rows="2"
+                        placeholder="e.g. Covering jewellery, turmeric powder, raw cotton... (include any temperature control or delivery dates here)"
+                      ></textarea>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                       <div>
-                        <label class="field-label" for="origin">Origin (City / Port)</label>
-                        <input class="field" id="origin" name="origin" type="text" required />
+                        <label class="field-label" for="destinationCountry">Destination Country</label>
+                        <div class="select-wrap">
+                          <select class="field" id="destinationCountry" name="destinationCountry">
+                            <option value="">Select a country…</option>
+                            <option value="Afghanistan">Afghanistan</option>
+                            <option value="Albania">Albania</option>
+                            <option value="Algeria">Algeria</option>
+                            <option value="Andorra">Andorra</option>
+                            <option value="Angola">Angola</option>
+                            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Armenia">Armenia</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Austria">Austria</option>
+                            <option value="Azerbaijan">Azerbaijan</option>
+                            <option value="Bahamas">Bahamas</option>
+                            <option value="Bahrain">Bahrain</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="Barbados">Barbados</option>
+                            <option value="Belarus">Belarus</option>
+                            <option value="Belgium">Belgium</option>
+                            <option value="Belize">Belize</option>
+                            <option value="Benin">Benin</option>
+                            <option value="Bhutan">Bhutan</option>
+                            <option value="Bolivia">Bolivia</option>
+                            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                            <option value="Botswana">Botswana</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="Brunei">Brunei</option>
+                            <option value="Bulgaria">Bulgaria</option>
+                            <option value="Burkina Faso">Burkina Faso</option>
+                            <option value="Burundi">Burundi</option>
+                            <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+                            <option value="Cabo Verde">Cabo Verde</option>
+                            <option value="Cambodia">Cambodia</option>
+                            <option value="Cameroon">Cameroon</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Central African Republic">Central African Republic</option>
+                            <option value="Chad">Chad</option>
+                            <option value="Chile">Chile</option>
+                            <option value="China">China</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Comoros">Comoros</option>
+                            <option value="Congo (Congo-Brazzaville)">Congo (Congo-Brazzaville)</option>
+                            <option value="Costa Rica">Costa Rica</option>
+                            <option value="Croatia">Croatia</option>
+                            <option value="Cuba">Cuba</option>
+                            <option value="Cyprus">Cyprus</option>
+                            <option value="Czechia (Czech Republic)">Czechia (Czech Republic)</option>
+                            <option value="Democratic Republic of the Congo">Democratic Republic of the Congo</option>
+                            <option value="Denmark">Denmark</option>
+                            <option value="Djibouti">Djibouti</option>
+                            <option value="Dominica">Dominica</option>
+                            <option value="Dominican Republic">Dominican Republic</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="Egypt">Egypt</option>
+                            <option value="El Salvador">El Salvador</option>
+                            <option value="Equatorial Guinea">Equatorial Guinea</option>
+                            <option value="Eritrea">Eritrea</option>
+                            <option value="Estonia">Estonia</option>
+                            <option value="Eswatini (fmr. 'Swaziland')">Eswatini (fmr. "Swaziland")</option>
+                            <option value="Ethiopia">Ethiopia</option>
+                            <option value="Fiji">Fiji</option>
+                            <option value="Finland">Finland</option>
+                            <option value="France">France</option>
+                            <option value="Gabon">Gabon</option>
+                            <option value="Gambia">Gambia</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Ghana">Ghana</option>
+                            <option value="Greece">Greece</option>
+                            <option value="Grenada">Grenada</option>
+                            <option value="Guatemala">Guatemala</option>
+                            <option value="Guinea">Guinea</option>
+                            <option value="Guinea-Bissau">Guinea-Bissau</option>
+                            <option value="Guyana">Guyana</option>
+                            <option value="Haiti">Haiti</option>
+                            <option value="Holy See">Holy See</option>
+                            <option value="Honduras">Honduras</option>
+                            <option value="Hungary">Hungary</option>
+                            <option value="Iceland">Iceland</option>
+                            <option value="India">India</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Iran">Iran</option>
+                            <option value="Iraq">Iraq</option>
+                            <option value="Ireland">Ireland</option>
+                            <option value="Israel">Israel</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Jamaica">Jamaica</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Jordan">Jordan</option>
+                            <option value="Kazakhstan">Kazakhstan</option>
+                            <option value="Kenya">Kenya</option>
+                            <option value="Kiribati">Kiribati</option>
+                            <option value="Kuwait">Kuwait</option>
+                            <option value="Kyrgyzstan">Kyrgyzstan</option>
+                            <option value="Laos">Laos</option>
+                            <option value="Latvia">Latvia</option>
+                            <option value="Lebanon">Lebanon</option>
+                            <option value="Lesotho">Lesotho</option>
+                            <option value="Liberia">Liberia</option>
+                            <option value="Libya">Libya</option>
+                            <option value="Liechtenstein">Liechtenstein</option>
+                            <option value="Lithuania">Lithuania</option>
+                            <option value="Luxembourg">Luxembourg</option>
+                            <option value="Madagascar">Madagascar</option>
+                            <option value="Malawi">Malawi</option>
+                            <option value="Malaysia">Malaysia</option>
+                            <option value="Maldives">Maldives</option>
+                            <option value="Mali">Mali</option>
+                            <option value="Malta">Malta</option>
+                            <option value="Marshall Islands">Marshall Islands</option>
+                            <option value="Mauritania">Mauritania</option>
+                            <option value="Mauritius">Mauritius</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Micronesia">Micronesia</option>
+                            <option value="Moldova">Moldova</option>
+                            <option value="Monaco">Monaco</option>
+                            <option value="Mongolia">Mongolia</option>
+                            <option value="Montenegro">Montenegro</option>
+                            <option value="Morocco">Morocco</option>
+                            <option value="Mozambique">Mozambique</option>
+                            <option value="Myanmar (formerly Burma)">Myanmar (formerly Burma)</option>
+                            <option value="Namibia">Namibia</option>
+                            <option value="Nauru">Nauru</option>
+                            <option value="Nepal">Nepal</option>
+                            <option value="Netherlands">Netherlands</option>
+                            <option value="New Zealand">New Zealand</option>
+                            <option value="Nicaragua">Nicaragua</option>
+                            <option value="Niger">Niger</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="North Korea">North Korea</option>
+                            <option value="North Macedonia">North Macedonia</option>
+                            <option value="Norway">Norway</option>
+                            <option value="Oman">Oman</option>
+                            <option value="Pakistan">Pakistan</option>
+                            <option value="Palau">Palau</option>
+                            <option value="Palestine State">Palestine State</option>
+                            <option value="Panama">Panama</option>
+                            <option value="Papua New Guinea">Papua New Guinea</option>
+                            <option value="Paraguay">Paraguay</option>
+                            <option value="Peru">Peru</option>
+                            <option value="Philippines">Philippines</option>
+                            <option value="Poland">Poland</option>
+                            <option value="Portugal">Portugal</option>
+                            <option value="Qatar">Qatar</option>
+                            <option value="Romania">Romania</option>
+                            <option value="Russia">Russia</option>
+                            <option value="Rwanda">Rwanda</option>
+                            <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                            <option value="Saint Lucia">Saint Lucia</option>
+                            <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                            <option value="Samoa">Samoa</option>
+                            <option value="San Marino">San Marino</option>
+                            <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                            <option value="Saudi Arabia">Saudi Arabia</option>
+                            <option value="Senegal">Senegal</option>
+                            <option value="Serbia">Serbia</option>
+                            <option value="Seychelles">Seychelles</option>
+                            <option value="Sierra Leone">Sierra Leone</option>
+                            <option value="Singapore">Singapore</option>
+                            <option value="Slovakia">Slovakia</option>
+                            <option value="Slovenia">Slovenia</option>
+                            <option value="Solomon Islands">Solomon Islands</option>
+                            <option value="Somalia">Somalia</option>
+                            <option value="South Africa">South Africa</option>
+                            <option value="South Korea">South Korea</option>
+                            <option value="South Sudan">South Sudan</option>
+                            <option value="Spain">Spain</option>
+                            <option value="Sri Lanka">Sri Lanka</option>
+                            <option value="Sudan">Sudan</option>
+                            <option value="Suriname">Suriname</option>
+                            <option value="Sweden">Sweden</option>
+                            <option value="Switzerland">Switzerland</option>
+                            <option value="Syria">Syria</option>
+                            <option value="Tajikistan">Tajikistan</option>
+                            <option value="Tanzania">Tanzania</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Timor-Leste">Timor-Leste</option>
+                            <option value="Togo">Togo</option>
+                            <option value="Tonga">Tonga</option>
+                            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                            <option value="Tunisia">Tunisia</option>
+                            <option value="Turkey">Turkey</option>
+                            <option value="Turkmenistan">Turkmenistan</option>
+                            <option value="Tuvalu">Tuvalu</option>
+                            <option value="Uganda">Uganda</option>
+                            <option value="Ukraine">Ukraine</option>
+                            <option value="United Arab Emirates">United Arab Emirates</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United States of America">United States of America</option>
+                            <option value="Uruguay">Uruguay</option>
+                            <option value="Uzbekistan">Uzbekistan</option>
+                            <option value="Vanuatu">Vanuatu</option>
+                            <option value="Venezuela">Venezuela</option>
+                            <option value="Vietnam">Vietnam</option>
+                            <option value="Yemen">Yemen</option>
+                            <option value="Zambia">Zambia</option>
+                            <option value="Zimbabwe">Zimbabwe</option>
+                          </select>
+                          <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+                        </div>
                       </div>
-                      <div>
-                        <label class="field-label" for="destination">Destination (City / Port)</label>
-                        <input class="field" id="destination" name="destination" type="text" required />
-                      </div>
-                    </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
                       <div>
-                        <label class="field-label" for="weight">Est. Weight (kg)</label>
-                        <input class="field" id="weight" name="weight" type="text" inputmode="numeric" />
-                      </div>
-                      <div>
-                        <label class="field-label" for="volume">Est. Volume (cbm)</label>
-                        <input class="field" id="volume" name="volume" type="text" inputmode="numeric" />
-                      </div>
-                      <div class="sm:col-span-2 md:col-span-1">
                         <label class="field-label" for="containerType">Container Type</label>
                         <div class="select-wrap">
                           <select class="field" id="containerType" name="containerType">
@@ -118,26 +306,26 @@
                           <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
                         </div>
                       </div>
+                      <div>
+                        <label class="field-label" for="weightOrQuantity">Est. Weight or Quantity</label>
+                        <div class="flex bg-white/50 focus-within:bg-white rounded border border-outline-variant focus-within:border-secondary focus-within:ring-2 focus-within:ring-secondary/20 transition-all duration-200">
+                          <input class="flex-1 bg-transparent px-4 py-3 text-body-md focus:outline-none min-h-[44px] w-full" id="weightOrQuantity" name="weightOrQuantity" type="text" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9\.]/g, '')" />
+                          <div class="relative w-[90px] shrink-0 border-l border-outline-variant">
+                            <select class="w-full h-full appearance-none bg-transparent pl-2 pr-6 font-medium focus:outline-none cursor-pointer text-body-sm" id="unit" name="unit">
+                              <option value="kg">kg</option>
+                              <option value="MT">MT (Tons)</option>
+                              <option value="lbs">lbs</option>
+                              <option value="units">units</option>
+                              <option value="pallets">pallets</option>
+                            </select>
+                            <span class="material-symbols-outlined absolute right-1.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[20px]" aria-hidden="true">expand_more</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </fieldset>
 
-                <!-- 3. Additional -->
-                <fieldset class="flex flex-col gap-stack-md">
-                  <legend class="w-full font-title-lg text-title-lg text-primary border-b border-outline-variant pb-stack-sm mb-stack-md">
-                    3. Additional Requirements
-                  </legend>
-                  <div>
-                    <label class="field-label" for="notes">Special Handling or Instructions</label>
-                    <textarea
-                      class="field"
-                      id="notes"
-                      name="notes"
-                      rows="4"
-                      placeholder="Temperature control, hazardous materials, specific delivery dates…"
-                    ></textarea>
-                  </div>
-                </fieldset>
+
 
                 <p
                   class="font-body-md text-body-md rounded px-4 py-3"
@@ -147,7 +335,7 @@
                   hidden
                 ></p>
 
-                <div class="flex justify-stretch sm:justify-end">
+                <div class="flex justify-stretch sm:justify-end mt-4">
                   <button class="btn-primary w-full sm:w-auto px-8" type="submit">
                     Request Quote
                     <span class="material-symbols-outlined text-[20px]" aria-hidden="true">arrow_forward</span>
@@ -159,67 +347,9 @@
 
           <!-- Sidebar -->
           <aside class="lg:col-span-4 flex flex-col gap-6">
-            <!-- What happens next: a single vertical rail at every breakpoint.
-                 The export's alternating md: layout collapsed into overlapping
-                 nodes on narrow screens. -->
-            <section class="bg-surface-container-low rounded-lg p-6 border border-surface-container-high">
-              <h2 class="font-title-lg text-title-lg text-primary mb-stack-md flex items-center gap-2">
-                <span class="material-symbols-outlined text-secondary" aria-hidden="true">pending_actions</span>
-                What Happens Next?
-              </h2>
-              <ol class="relative flex flex-col gap-4 pl-2">
-                <li class="relative flex gap-4">
-                  <span class="absolute left-3 top-7 bottom-[-1.25rem] w-0.5 bg-outline-variant" aria-hidden="true"></span>
-                  <span
-                    class="relative z-10 flex items-center justify-center w-6 h-6 shrink-0 rounded-full
-                           bg-secondary text-on-secondary font-label-sm text-label-sm
-                           border-2 border-surface-container-lowest shadow-sm"
-                  >
-                    1
-                  </span>
-                  <div class="flex-1 p-3 rounded bg-surface-container-lowest border border-outline-variant shadow-ambient-1">
-                    <h3 class="font-label-md text-label-md text-primary">Review</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant mt-1">
-                      Specialists analyze your logistics requirements.
-                    </p>
-                  </div>
-                </li>
-                <li class="relative flex gap-4">
-                  <span class="absolute left-3 top-7 bottom-[-1.25rem] w-0.5 bg-outline-variant" aria-hidden="true"></span>
-                  <span
-                    class="relative z-10 flex items-center justify-center w-6 h-6 shrink-0 rounded-full
-                           bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm
-                           border-2 border-surface-container-lowest shadow-sm"
-                  >
-                    2
-                  </span>
-                  <div class="flex-1 p-3">
-                    <h3 class="font-label-md text-label-md text-on-surface">Contact</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant mt-1">
-                      We reach out for any necessary clarifications.
-                    </p>
-                  </div>
-                </li>
-                <li class="relative flex gap-4">
-                  <span
-                    class="relative z-10 flex items-center justify-center w-6 h-6 shrink-0 rounded-full
-                           bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm
-                           border-2 border-surface-container-lowest shadow-sm"
-                  >
-                    3
-                  </span>
-                  <div class="flex-1 p-3">
-                    <h3 class="font-label-md text-label-md text-on-surface">Options</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant mt-1">
-                      You receive tailored routing and pricing options.
-                    </p>
-                  </div>
-                </li>
-              </ol>
-            </section>
 
             <!-- Trust -->
-            <section class="card p-6">
+            <section class="card p-6 bg-white/60 backdrop-blur-xl border border-white/50 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <h2 class="sr-only">Why work with us</h2>
               <div class="flex items-start gap-4 mb-stack-md">
                 <span class="material-symbols-outlined fill text-secondary" aria-hidden="true">lock</span>
@@ -242,15 +372,23 @@
             </section>
 
             <!-- Direct contact -->
-            <section class="bg-primary-container rounded-lg p-6 text-on-primary-container">
-              <h2 class="font-title-lg text-title-lg text-surface-container-lowest mb-2">
-                Prefer to talk it through?
-              </h2>
-              <p class="font-body-md text-body-md opacity-80 mb-4">
-                Our trade desk is open Mon–Fri, 9:00 AM – 6:00 PM IST.
+            <section class="card p-5 sm:p-6 md:p-6 bg-white/60 backdrop-blur-xl border border-white/50 shadow-xl transition-all duration-500 hover:shadow-2xl hover:bg-white/70">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20">
+                  <span class="material-symbols-outlined text-primary text-[22px]" aria-hidden="true">support_agent</span>
+                </div>
+                <h2 class="font-title-lg text-title-lg text-primary">
+                  Need Expert Help?
+                </h2>
+              </div>
+              
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                Skip the form and speak directly with our global trade specialists.<br/>
+                <span class="block mt-2 text-sm opacity-80">Available Mon–Fri, 9:00 AM – 6:00 PM IST</span>
               </p>
-              <a class="btn-outline-on-dark w-full" href="tel:+918248272430">
-                <span class="material-symbols-outlined text-[18px]" aria-hidden="true">call</span>
+              
+              <a class="btn-primary w-full text-base" href="tel:+918248272430">
+                <span class="material-symbols-outlined text-[20px]" aria-hidden="true">call</span>
                 +91-8248272430
               </a>
             </section>
